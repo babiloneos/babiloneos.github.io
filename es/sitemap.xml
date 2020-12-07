@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://babiloneos.github.io/</loc>
+    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/about/</loc>
+    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/archive/</loc>
+    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/archive/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/posts/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/tags/"
+                />
+  </url>
+  
+</urlset>
