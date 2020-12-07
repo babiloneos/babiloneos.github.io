@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>html on Babiloneos</title>
+    <link>https://babiloneos.github.io/tags/html/</link>
+    <description>Recent content in html on Babiloneos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <managingEditor>babiloneos@gmail.com (Guillermo Ballesteros)</managingEditor>
+    <webMaster>babiloneos@gmail.com (Guillermo Ballesteros)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://babiloneos.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Resolviendo General Skills - picoCTF 2020</title>
+        <link>https://babiloneos.github.io/posts/general_skills_picoctf_2020/</link>
+        <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+        <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
+        <atom:modified>Mon, 07 Dec 2020 00:00:00 +0000</atom:modified>
+        <guid>https://babiloneos.github.io/posts/general_skills_picoctf_2020/</guid>
+        <description>2Warm - 50 points Descripción Can you convert the number 42 (base 10) to binary (base 2)? Procedimiento Este reto es el más sencillo, y lo digo sin miedo a equivocarme. Lo único que necesitamos es saber conversión de bases, o más fácil, tener una calculadora.
+Para facilitar el trabajo usaré una calculadora en modo programador. Simplemente inntroducimos el valor decimal y nos retorna el mismo valor en binario.
+Calculadora:</description>
+        
+        <dc:creator>Guillermo Ballesteros</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>markdown</category>
+            
+          
+            
+              <category>css</category>
+            
+          
+            
+              <category>html</category>
+            
+          
+            
+              <category>themes</category>
+            
+          
+        
+        
+          
+            
+              <category>CTF</category>
+            
+          
+            
+              <category>PicoCTF</category>
+            
+          
+        
+        
+          
+            
+              <category>picoCTF2020</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
