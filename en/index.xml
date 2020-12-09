@@ -44,7 +44,7 @@
 
       
       <item>
-        <title>Resolviendo General Skills - picoCTF 2020</title>
+        <title>Solving General Skills - picoCTF 2020</title>
         <link>https://babiloneos.github.io/en/posts/general_skills_picoctf_2020/</link>
         <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
         <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
@@ -59,19 +59,11 @@
         
           
             
-              <category>markdown</category>
+              <category>base64</category>
             
           
             
-              <category>css</category>
-            
-          
-            
-              <category>html</category>
-            
-          
-            
-              <category>themes</category>
+              <category>general skills</category>
             
           
         

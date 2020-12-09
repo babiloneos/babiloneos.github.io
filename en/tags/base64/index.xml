@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>base64 on Babiloneos</title>
+    <link>https://babiloneos.github.io/en/tags/base64/</link>
+    <description>Recent content in base64 on Babiloneos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>babiloneos@gmail.com (Guillermo Ballesteros)</managingEditor>
+    <webMaster>babiloneos@gmail.com (Guillermo Ballesteros)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://babiloneos.github.io/en/tags/base64/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Solving General Skills - picoCTF 2020</title>
+        <link>https://babiloneos.github.io/en/posts/general_skills_picoctf_2020/</link>
+        <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+        <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
+        <atom:modified>Mon, 07 Dec 2020 00:00:00 +0000</atom:modified>
+        <guid>https://babiloneos.github.io/en/posts/general_skills_picoctf_2020/</guid>
+        <description></description>
+        
+        <dc:creator>Guillermo Ballesteros</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>base64</category>
+            
+          
+            
+              <category>general skills</category>
+            
+          
+        
+        
+          
+            
+              <category>CTF</category>
+            
+          
+            
+              <category>PicoCTF</category>
+            
+          
+        
+        
+          
+            
+              <category>picoCTF2020</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

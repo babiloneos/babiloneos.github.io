@@ -23,12 +23,12 @@
 
       
       <item>
-        <title>css</title>
-        <link>https://babiloneos.github.io/tags/css/</link>
+        <title>Bash</title>
+        <link>https://babiloneos.github.io/tags/bash/</link>
         <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
         <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
         
-        <guid>https://babiloneos.github.io/tags/css/</guid>
+        <guid>https://babiloneos.github.io/tags/bash/</guid>
         <description></description>
         
         <dc:creator>Guillermo Ballesteros</dc:creator>
@@ -41,12 +41,12 @@
       </item>
       
       <item>
-        <title>html</title>
-        <link>https://babiloneos.github.io/tags/html/</link>
+        <title>General skills</title>
+        <link>https://babiloneos.github.io/tags/general-skills/</link>
         <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
         <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
         
-        <guid>https://babiloneos.github.io/tags/html/</guid>
+        <guid>https://babiloneos.github.io/tags/general-skills/</guid>
         <description></description>
         
         <dc:creator>Guillermo Ballesteros</dc:creator>
@@ -59,30 +59,12 @@
       </item>
       
       <item>
-        <title>markdown</title>
-        <link>https://babiloneos.github.io/tags/markdown/</link>
+        <title>Linux</title>
+        <link>https://babiloneos.github.io/tags/linux/</link>
         <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
         <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
         
-        <guid>https://babiloneos.github.io/tags/markdown/</guid>
-        <description></description>
-        
-        <dc:creator>Guillermo Ballesteros</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>themes</title>
-        <link>https://babiloneos.github.io/tags/themes/</link>
-        <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
-        <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
-        
-        <guid>https://babiloneos.github.io/tags/themes/</guid>
+        <guid>https://babiloneos.github.io/tags/linux/</guid>
         <description></description>
         
         <dc:creator>Guillermo Ballesteros</dc:creator>

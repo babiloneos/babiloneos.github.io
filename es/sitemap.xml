@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://babiloneos.github.io/tags/bash/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://babiloneos.github.io/categories/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -29,21 +34,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://babiloneos.github.io/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://babiloneos.github.io/tags/css/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/tags/css/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/tags/css/"
                 />
   </url>
   
@@ -63,33 +53,23 @@
   </url>
   
   <url>
-    <loc>https://babiloneos.github.io/tags/html/</loc>
+    <loc>https://babiloneos.github.io/tags/general-skills/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://babiloneos.github.io/en/tags/html/"
+                href="https://babiloneos.github.io/en/tags/general-skills/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://babiloneos.github.io/tags/html/"
+                href="https://babiloneos.github.io/tags/general-skills/"
                 />
   </url>
   
   <url>
-    <loc>https://babiloneos.github.io/tags/markdown/</loc>
+    <loc>https://babiloneos.github.io/tags/linux/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/tags/markdown/"
-                />
   </url>
   
   <url>
@@ -179,21 +159,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://babiloneos.github.io/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://babiloneos.github.io/tags/themes/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/tags/themes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/tags/themes/"
                 />
   </url>
   

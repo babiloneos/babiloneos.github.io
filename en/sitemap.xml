@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://babiloneos.github.io/en/tags/base64/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://babiloneos.github.io/en/categories/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -29,21 +34,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://babiloneos.github.io/en/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://babiloneos.github.io/en/tags/css/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/tags/css/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/tags/css/"
                 />
   </url>
   
@@ -63,32 +53,17 @@
   </url>
   
   <url>
-    <loc>https://babiloneos.github.io/en/tags/html/</loc>
+    <loc>https://babiloneos.github.io/en/tags/general-skills/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://babiloneos.github.io/tags/html/"
+                href="https://babiloneos.github.io/tags/general-skills/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://babiloneos.github.io/en/tags/html/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://babiloneos.github.io/en/tags/markdown/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/tags/markdown/"
+                href="https://babiloneos.github.io/en/tags/general-skills/"
                 />
   </url>
   
@@ -138,21 +113,6 @@
   </url>
   
   <url>
-    <loc>https://babiloneos.github.io/en/posts/general_skills_picoctf_2020/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/posts/general_skills_picoctf_2020/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/posts/general_skills_picoctf_2020/"
-                />
-  </url>
-  
-  <url>
     <loc>https://babiloneos.github.io/en/series/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -168,6 +128,21 @@
   </url>
   
   <url>
+    <loc>https://babiloneos.github.io/en/posts/general_skills_picoctf_2020/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/posts/general_skills_picoctf_2020/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/posts/general_skills_picoctf_2020/"
+                />
+  </url>
+  
+  <url>
     <loc>https://babiloneos.github.io/en/tags/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -179,21 +154,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://babiloneos.github.io/en/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://babiloneos.github.io/en/tags/themes/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/tags/themes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/tags/themes/"
                 />
   </url>
   

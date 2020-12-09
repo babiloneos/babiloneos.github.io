@@ -1326,7 +1326,7 @@
 <meta name="description" content="Writeup de los retos en picoCTF 2020 de la categoría General Skills" />
 
 
-<meta name="keywords" content="markdown,css,html,themes">
+<meta name="keywords" content="Bash,Linux,General skills">
 
 <meta name="created" content="2020-12-07T00:00:00&#43;0000">
 <meta name="modified" content="2020-12-07T00:00:00&#43;0000">
@@ -1382,7 +1382,7 @@
     "dateModified": "2020-12-07T00:00:00Z",
     "url" : "https://babiloneos.github.io/posts/general_skills_picoctf_2020/",
     "description": "Writeup de los retos en picoCTF 2020 de la categoría General Skills",
-    "keywords": ["markdown","css","html","themes"],
+    "keywords": ["Bash","Linux","General skills"],
     "author": {
       "@type": "Person",
       "name": "Guillermo Ballesteros"
@@ -1724,7 +1724,7 @@
 <div class="single__infos">
   <time class="single__info" title="Escrito en">📅&nbsp;2020-12-07 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo de lectura"> ☕&nbsp;4&nbsp;minutos lectura </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo de lectura"> ☕&nbsp;7&nbsp;minutos lectura </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="Escrito por">✍️&nbsp;Guillermo Ballesteros</span>
   
@@ -1739,13 +1739,11 @@
   🏷️
   
 
-  <li><a href="https://babiloneos.github.io/tags/markdown/" class="single__tag" title="markdown">#markdown</a></li>
+  <li><a href="https://babiloneos.github.io/tags/bash/" class="single__tag" title="Bash">#Bash</a></li>
 
-  <li><a href="https://babiloneos.github.io/tags/css/" class="single__tag" title="css">#css</a></li>
+  <li><a href="https://babiloneos.github.io/tags/linux/" class="single__tag" title="Linux">#Linux</a></li>
 
-  <li><a href="https://babiloneos.github.io/tags/html/" class="single__tag" title="html">#html</a></li>
-
-  <li><a href="https://babiloneos.github.io/tags/themes/" class="single__tag" title="themes">#themes</a></li>
+  <li><a href="https://babiloneos.github.io/tags/general-skills/" class="single__tag" title="General skills">#General skills</a></li>
 
 </ul>
 
@@ -1896,8 +1894,154 @@ Usaré la página <a href="https://www.base64decode.org/">base64decode</a>, dond
 </figure><br />
 Pareciera que ese no es el resultado, pero si reemplazamos los número por la letra más parecida se convierte en un frase, lo cuál nos indica que en efecto esa es la respuesta.</p>
 <h3 id="solución-4">Solución</h3>
-<div class="box">
+<p><div class="box">
 picoCTF{l3arn_th3_r0p35}
+</div><br />
+Lo siguiente fue añadido el día 9 de Diciembre, 2020.</p>
+<h2 id="first-grep---100-points">First Grep - 100 points</h2>
+<h3 id="descripción-5">Descripción</h3>
+<div class="box">Can you find the flag in <em>file</em>? This would be really tedious to look through manually, something tells me there is a better way.</div>
+<h3 id="procedimiento-5">Procedimiento</h3>
+<p>Este reto es extremadamente similar a strings, pues el nombre ya nos dice que hacer y de nueva forma, se basa en usar <em>grep</em>. Sin embargo, esta vez no tenemos un archivo ejecutable, sino un archivo de texto por lo que, pese a ser útil el comando <em>strings</em>, lo ideal sería usar el comando <code>cat</code>.<br />
+El comando <code>cat</code> realmente funciona para concatenar el contenido de dos archivos y lo mostrará como output, sin embargo, si solo se le pasa como argumento un archivo, mostrará el contenido de ese archivo como output. Usando este output en grep nos terminaría dando el mismo resultado que se obtuvo en el reto antes mencionado.<br />
+El comando final debería quedar algo así:</p>
+<pre><code>strings file | grep &quot;picoCTF&quot;
+</code></pre><figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/FirstGrep_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure>
+<h3 id="solución-5">Solución</h3>
+<div class="box">
+picoCTF{grep_is_good_to_find_things_dba08a45}
+</div>
+<h2 id="whays-a-net-cat---100-points">whay&rsquo;s a net cat? - 100 points</h2>
+<h3 id="descripción-6">Descripción</h3>
+<div class="box">Using netcat (nc) is going to be pretty important. Can you connect to <em>jupiter.challenges.picoctf.org</em> at port <em>64287</em> to get the flag?</div>
+<h3 id="procedimiento-6">Procedimiento</h3>
+<p>Esta vez todo está claro desde el nombre y la descripción: debemos usar netcat en la url y puerto indicados.<br />
+Netcat es una herramienta que permite asociar un script a un puerto específico de la IP publica propia. La forma de usarlo sería:</p>
+<pre><code>nc jupiter.challenges.picoctf.org 64287
+</code></pre><figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/whatsanetcat_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure>
+<h3 id="solución-6">Solución</h3>
+<div class="box">
+picoCTF{nEtCat_Mast3ry_284be8f7}
+</div>
+<h2 id="plumbing---200-points">plumbing - 200 points</h2>
+<h3 id="descripción-7">Descripción</h3>
+<p>Sometimes you need to handle process data outside of a file. Can you find a way to keep the output from this program and search for the flag? Connect to <em>jupiter.challenges.picoctf.org 7480</em>.</p>
+<h3 id="procedimiento-7">Procedimiento</h3>
+<p>Por primera vez las cosas no parecen del todo claras, sin embargo recordando cómo usamos <code>grep</code> y <code>nc</code> podríamos guiarnos. La primer idea que se me viene a la mente es revisar la salida del netcar especificada:<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/plumbing_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+La salida es larga y repetitiva. Siguiendo con mi idea, habría que mandar esta salida al <code>grep</code> para que nos muestre directamente la linea que tenga <em>picoCTF</em> en ella:</p>
+<pre><code>nc jupiter.challenges.picoctf.org 7480 | grep &quot;picoCTF&quot;
+</code></pre><p><figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/plumbing_02.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+Funcionó. Como se observa, toda salida en la terminal se puede enviar a grep para buscar información específica.</p>
+<h3 id="solución-7">Solución</h3>
+<div class="box">
+picoCTF{digital_plumb3r_06e9d954}
+</div>
+<h2 id="based---200-points">Based - 200 points</h2>
+<h3 id="descripción-8">Descripción</h3>
+<div class="box">To get truly 1337, you must understand different data encodings, such as hexadecimal or binary. Can you get the flag from this program to prove you are on the way to becoming 1337? Connect with <em>nc jupiter.challenges.picoctf.org 29221</em>.</div>
+<h3 id="procedimiento-8">Procedimiento</h3>
+<p>Para hacernos una idea de a qué nos enfrentamos, haré el netcat para ver qué me muestra:<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/Based_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+Pues bien, tenemos un reto contrareloj y que al menos en la primer parte nos pide conversión de valores. Se me ocurren dos soluciones: hacer uno por uno de forma manual, o hacer un script de python, o bash, para que lo resuelva por nosotros. Yo me iré por la opción más rápida que es resolverlo de forma manual. Y para hacerlo aún más rápido usaré herramientas online.</p>
+<h4 id="primer-paso">Primer paso</h4>
+<p>Para el valor binario usaré este <a href="https://codebeautify.org/binary-string-converter">convertidor de Binario a String</a>:<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/Based_02.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+¡Bien! tenemos la primer palabra: <code>street</code>. Al introducirla en la terminal obtenemos la siguiente respuesta:<br />
+<div class="box">
+Please give me the  163 154 165 144 147 145 as a word.
+Input:
+</div></p>
+<h4 id="segundo-paso">Segundo paso</h4>
+<p>Parece que la siguiente palabra tiene valores entre 140 y 170, lo cual me hace pensar que son valores decimales de ASCII, pero al revisar la tabla (que encontrarás en <a href="#lets-warm-up---50-points">Lets Warm Up</a>), notamos que ASCII solo llega hasta el 127 así que descartamos la idea.<br />
+Podríamos pensar que es otro tipo de codificación para caracteres, pero la verdad es que todas se basan en ASCII por lo que valores más allá de 127 no serán caracteres del alfabeto inglés. Mirando un poco más de cerca los valores a decodificar notamos que no hay ningún 8 o 9, así que se podría tratar de un valor octal, donde el 141 es equivalente a 97 decimal, o <em>a</em> en ASCII. Suena muy bien la idea, así que usaremos <a href="https://onlineasciitools.com/convert-octal-to-ascii">esta página</a> que convierte de Octal a ASCII.<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/Based_03.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+Al introducir la palabra obtenida en la terminal obtenemos:<br />
+<div class="box">
+Please give me the 736f636b6574 as a word.
+Input:
+</div></p>
+<h4 id="tercer-paso">Tercer paso</h4>
+<p>Observamos valores númericos normales, pero también letras, y también notamos que tenemos una cantidad par de caracteres, específicamente 12. Todo esto me hace pensar en Hexadecimal, que tendría sentido siguiendo el patrón establecido por los dos pasos anteriores.<br />
+Usando la misma herramienta que con el paso anterior, pero el valor introducido lo dividiremos en pares.<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/Based_04.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+¡Genial! lo introducimos en la terminal y obtenemos:</p>
+<h3 id="solucion">Solucion</h3>
+<div class="box">
+You've beaten the challenge
+Flag: picoCTF{learning_about_converting_values_00a975ff}
 </div>
 
     </article>
@@ -2104,7 +2248,7 @@ picoCTF{l3arn_th3_r0p35}
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=Resolviendo%20General%20Skills%20-%20picoCTF%202020&url=https%3a%2f%2fbabiloneos.github.io%2fposts%2fgeneral_skills_picoctf_2020%2f&hashtags=markdown%2ccss%2chtml%2cthemes&via=Guillermo%20Ballesteros" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Resolviendo%20General%20Skills%20-%20picoCTF%202020&url=https%3a%2f%2fbabiloneos.github.io%2fposts%2fgeneral_skills_picoctf_2020%2f&hashtags=Bash%2cLinux%2cGeneral%20skills&via=Guillermo%20Ballesteros" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2632,6 +2776,40 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#descripción-4">Descripción</a></li>
         <li><a href="#procedimiento-4">Procedimiento</a></li>
         <li><a href="#solución-4">Solución</a></li>
+      </ul>
+    </li>
+    <li><a href="#first-grep---100-points">First Grep - 100 points</a>
+      <ul>
+        <li><a href="#descripción-5">Descripción</a></li>
+        <li><a href="#procedimiento-5">Procedimiento</a></li>
+        <li><a href="#solución-5">Solución</a></li>
+      </ul>
+    </li>
+    <li><a href="#whays-a-net-cat---100-points">whay&rsquo;s a net cat? - 100 points</a>
+      <ul>
+        <li><a href="#descripción-6">Descripción</a></li>
+        <li><a href="#procedimiento-6">Procedimiento</a></li>
+        <li><a href="#solución-6">Solución</a></li>
+      </ul>
+    </li>
+    <li><a href="#plumbing---200-points">plumbing - 200 points</a>
+      <ul>
+        <li><a href="#descripción-7">Descripción</a></li>
+        <li><a href="#procedimiento-7">Procedimiento</a></li>
+        <li><a href="#solución-7">Solución</a></li>
+      </ul>
+    </li>
+    <li><a href="#based---200-points">Based - 200 points</a>
+      <ul>
+        <li><a href="#descripción-8">Descripción</a></li>
+        <li><a href="#procedimiento-8">Procedimiento</a>
+          <ul>
+            <li><a href="#primer-paso">Primer paso</a></li>
+            <li><a href="#segundo-paso">Segundo paso</a></li>
+            <li><a href="#tercer-paso">Tercer paso</a></li>
+          </ul>
+        </li>
+        <li><a href="#solucion">Solucion</a></li>
       </ul>
     </li>
   </ul>
