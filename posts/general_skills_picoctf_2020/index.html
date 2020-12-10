@@ -1724,7 +1724,7 @@
 <div class="single__infos">
   <time class="single__info" title="Escrito en">📅&nbsp;2020-12-07 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo de lectura"> ☕&nbsp;7&nbsp;minutos lectura </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo de lectura"> ☕&nbsp;10&nbsp;minutos lectura </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="Escrito por">✍️&nbsp;Guillermo Ballesteros</span>
   
@@ -2008,7 +2008,7 @@ Input:
 </div></p>
 <h4 id="segundo-paso">Segundo paso</h4>
 <p>Parece que la siguiente palabra tiene valores entre 140 y 170, lo cual me hace pensar que son valores decimales de ASCII, pero al revisar la tabla (que encontrarás en <a href="#lets-warm-up---50-points">Lets Warm Up</a>), notamos que ASCII solo llega hasta el 127 así que descartamos la idea.<br />
-Podríamos pensar que es otro tipo de codificación para caracteres, pero la verdad es que todas se basan en ASCII por lo que valores más allá de 127 no serán caracteres del alfabeto inglés. Mirando un poco más de cerca los valores a decodificar notamos que no hay ningún 8 o 9, así que se podría tratar de un valor octal, donde el 141 es equivalente a 97 decimal, o <em>a</em> en ASCII. Suena muy bien la idea, así que usaremos <a href="https://onlineasciitools.com/convert-octal-to-ascii">esta página</a> que convierte de Octal a ASCII.<br />
+Podríamos pensar que es otro tipo de codificación para caracteres, pero la verdad es que todas se basan en ASCII por lo que valores más allá de 127 no serán caracteres del alfabeto inglés. Mirando un poco más de cerca los valores a decodificar notamos que no hay ningún 8 o 9, así que se podría tratar de un valor octal, donde el 141 es equivalente a 97 decimal, o <em>a</em> en ASCII. Suena muy bien la idea, así que usaremos <a href="https://cryptii.com/pipes/decimal-text">esta página</a> que convierte de Octal a ASCII.<br />
 <figure >
   
   
@@ -2043,6 +2043,174 @@ Usando la misma herramienta que con el paso anterior, pero el valor introducido 
 You've beaten the challenge
 Flag: picoCTF{learning_about_converting_values_00a975ff}
 </div>
+<h2 id="flag_shop---300-points">flag_shop - 300 points</h2>
+<h2 id="mus1c---300-points">mus1c - 300 points</h2>
+<h3 id="descripción-9">Descripción</h3>
+<div class="box">I wrote you a <em>song</em>. Put it in the picoCTF{} flag format.</div>
+<h4 id="pistas">Pistas</h4>
+<div class="expand">
+  <button type="button" class="expand__button" aria-label="Expand Button">
+    <span class="expand-icon expand-icon__right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+    </span>
+    Pistas
+  </button>
+  <div class="expand__content">
+    Do you think you can master rockstar?
+  </div>
+</div>
+<h3 id="procedimiento-9">Procedimiento</h3>
+<p>La <em>canción</em> que se menciona en la descripción es esta:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-lyrics.txt" data-lang="lyrics.txt">Pico&#39;s a CTFFFFFFF
+my mind is waitin
+It&#39;s waitin
+
+Put my mind of Pico into This
+my flag is not found
+put This into my flag
+put my flag into Pico
+
+
+shout Pico
+shout Pico
+shout Pico
+
+My song&#39;s something
+put Pico into This
+
+Knock This down, down, down
+put This into CTF
+
+shout CTF
+my lyric is nothing
+Put This without my song into my lyric
+Knock my lyric down, down, down
+
+shout my lyric
+
+Put my lyric into This
+Put my song with This into my lyric
+Knock my lyric down
+
+shout my lyric
+
+Build my lyric up, up ,up
+
+shout my lyric
+shout Pico
+shout It
+
+Pico CTF is fun
+security is important
+Fun is fun
+Put security with fun into Pico CTF
+Build Fun up
+shout fun times Pico CTF
+put fun times Pico CTF into my song
+
+build it up
+
+shout it
+shout it
+
+build it up, up
+shout it
+shout Pico
+</code></pre></td></tr></table>
+</div>
+</div><p>Como podrán observar, es muy confuso lo que se debería hacer y es aquí donde entra uno de los consejos que da <a href="https://www.youtube.com/user/RootOfTheNull">John Hammond</a>, un famoso youtuber que desde hace años resuelve CTFs, sobre usar google como aliado. Si analizamos un poco más cuidadosamente el archivo nos daremos cuenta que tiene una estructura peculiar, obvio simula estrofas, pero también pareciera un código de programación.<br />
+Podríamos guiarnos de ello y buscar en google algún lenguaje que use shout, build, y put, pero en vez de eso podríamos apoyarnos en las Pistas (o hints) que mencionan <code>master rockstar</code>. Busquemos eso en google:<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/mus1c_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+¡Ahí está! Encontramos el repositorio en GitHub de un Lenguaje de Programación llamado <a href="https://github.com/RockstarLang/rockstar"><strong>Rockstar</strong></a>. No hay muchas pruebas de que se trate de lo que buscamos, pero mirando las especificaciones nos encontramos con ejemplos como:</p>
+<pre><code class="language-arrays_Rockstar" data-lang="arrays_Rockstar">Let my string be &quot;abcdefg&quot;
+Shout my string at 0 (will print &quot;a&quot;)
+Shout my string at 1 (will print &quot;b&quot;)
+Let the character be my string at 2
+</code></pre><p>Que nos dicen que en efecto esto es lo que buscamos. Mirando un poco más el repositorio nos encontramos con el compilador <a href="https://github.com/gaborsch/rocky">Rocky</a> que está basado en Java, así que lo descargamos, compilamos el <em>.txt</em> que tenemos y el resultado es:<br />
+<div class="box"><code>&gt; ./rocky.jar programs/lyrics.txt</code><br />
+114<br />
+114<br />
+114<br />
+111<br />
+99<br />
+107<br />
+110<br />
+114<br />
+110<br />
+48<br />
+49<br />
+49<br />
+51<br />
+114</div><br />
+¡Excelente! Si recordamos lo visto en <a href="#based---200-points">Based</a> y en <a href="#lets-warm-up---50-points">Let&rsquo;s Warm Up</a> notaremos que estos números son valores de ASCII, por lo que ya sea usando una herramienta online, o de forma manual, llegaremos a el siguiente valor con esos números:</p>
 
     </article>
     
@@ -2810,6 +2978,17 @@ document.addEventListener('DOMContentLoaded', function () {
           </ul>
         </li>
         <li><a href="#solucion">Solucion</a></li>
+      </ul>
+    </li>
+    <li><a href="#flag_shop---300-points">flag_shop - 300 points</a></li>
+    <li><a href="#mus1c---300-points">mus1c - 300 points</a>
+      <ul>
+        <li><a href="#descripción-9">Descripción</a>
+          <ul>
+            <li><a href="#pistas">Pistas</a></li>
+          </ul>
+        </li>
+        <li><a href="#procedimiento-9">Procedimiento</a></li>
       </ul>
     </li>
   </ul>
