@@ -1724,7 +1724,7 @@
 <div class="single__infos">
   <time class="single__info" title="Escrito en">📅&nbsp;2020-12-07 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo de lectura"> ☕&nbsp;10&nbsp;minutos lectura </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo de lectura"> ☕&nbsp;12&nbsp;minutos lectura </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="Escrito por">✍️&nbsp;Guillermo Ballesteros</span>
   
@@ -2044,10 +2044,211 @@ You've beaten the challenge
 Flag: picoCTF{learning_about_converting_values_00a975ff}
 </div>
 <h2 id="flag_shop---300-points">flag_shop - 300 points</h2>
-<h2 id="mus1c---300-points">mus1c - 300 points</h2>
 <h3 id="descripción-9">Descripción</h3>
-<div class="box">I wrote you a <em>song</em>. Put it in the picoCTF{} flag format.</div>
+<div class="box">There&rsquo;s a flag shop selling stuff, can you buy a flag? <em>Source</em>. Connect with <code>nc jupiter.challenges.picoctf.org 4906</code>.</div>
 <h4 id="pistas">Pistas</h4>
+<div class="expand">
+  <button type="button" class="expand__button" aria-label="Expand Button">
+    <span class="expand-icon expand-icon__right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+    </span>
+    Pistas
+  </button>
+  <div class="expand__content">
+    Two&rsquo;s compliment can do some weird things when numbers get really big!
+  </div>
+</div>
+<h3 id="procedimiento-9">Procedimiento</h3>
+<p>Nos proporcionan un código fuente en C que nos explica un poco de qué trata el reto:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-store.c" data-lang="store.c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">setbuf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">con</span><span class="p">;</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">account_balance</span> <span class="o">=</span> <span class="mi">1100</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">con</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+        
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Welcome to the flag exchange</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;We sell flags</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">1. Check Account Balance</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">2. Buy Flags</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">3. Exit</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">menu</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s"> Enter a menu selection</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">menu</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">menu</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\n</span><span class="s"> Balance: %d </span><span class="se">\n\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">account_balance</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">menu</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Currently for sale</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;1. Defintely not the flag Flag</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;2. 1337 Flag</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">auction_choice</span><span class="p">;</span>
+            <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+            <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">auction_choice</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">auction_choice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;These knockoff Flags cost 900 each, enter desired quantity</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                
+                <span class="kt">int</span> <span class="n">number_flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+                <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">number_flags</span><span class="p">);</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">number_flags</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
+                    <span class="kt">int</span> <span class="n">total_cost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                    <span class="n">total_cost</span> <span class="o">=</span> <span class="mi">900</span><span class="o">*</span><span class="n">number_flags</span><span class="p">;</span>
+                    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The final cost is: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">total_cost</span><span class="p">);</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">total_cost</span> <span class="o">&lt;=</span> <span class="n">account_balance</span><span class="p">){</span>
+                        <span class="n">account_balance</span> <span class="o">=</span> <span class="n">account_balance</span> <span class="o">-</span> <span class="n">total_cost</span><span class="p">;</span>
+                        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Your current balance after transaction: %d</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">account_balance</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="k">else</span><span class="p">{</span>
+                        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Not enough funds to complete purchase</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                    <span class="p">}</span>
+                                    
+                    
+                <span class="p">}</span>
+                    
+                    
+                    
+                
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">auction_choice</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;1337 flags cost 100000 dollars, and we only have 1 in stock</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Enter 1 to buy one&#34;</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">bid</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+                <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">bid</span><span class="p">);</span>
+                
+                <span class="k">if</span><span class="p">(</span><span class="n">bid</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+                    
+                    <span class="k">if</span><span class="p">(</span><span class="n">account_balance</span> <span class="o">&gt;</span> <span class="mi">100000</span><span class="p">){</span>
+                        <span class="n">FILE</span> <span class="o">*</span><span class="n">f</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;flag.txt&#34;</span><span class="p">,</span> <span class="s">&#34;r&#34;</span><span class="p">);</span>
+                        <span class="k">if</span><span class="p">(</span><span class="n">f</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+
+                            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;flag not found: please run this on the server</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                            <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+                        <span class="p">}</span>
+                        <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">64</span><span class="p">];</span>
+                        <span class="n">fgets</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+                        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;YOUR FLAG IS: %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+                        <span class="p">}</span>
+                    
+                    <span class="k">else</span><span class="p">{</span>
+                        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Not enough funds for transaction</span><span class="se">\n\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+                    <span class="p">}}</span>
+
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="n">con</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Solución pendiente :) pero desde ya se ve que trata de explotación binaria por buffer overflow.</p>
+<h2 id="mus1c---300-points">mus1c - 300 points</h2>
+<h3 id="descripción-10">Descripción</h3>
+<div class="box">I wrote you a <em>song</em>. Put it in the picoCTF{} flag format.</div>
+<h4 id="pistas-1">Pistas</h4>
 <div class="expand">
   <button type="button" class="expand__button" aria-label="Expand Button">
     <span class="expand-icon expand-icon__right">
@@ -2059,7 +2260,7 @@ Flag: picoCTF{learning_about_converting_values_00a975ff}
     Do you think you can master rockstar?
   </div>
 </div>
-<h3 id="procedimiento-9">Procedimiento</h3>
+<h3 id="procedimiento-10">Procedimiento</h3>
 <p>La <em>canción</em> que se menciona en la descripción es esta:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2210,7 +2411,11 @@ Let the character be my string at 2
 49<br />
 51<br />
 114</div><br />
-¡Excelente! Si recordamos lo visto en <a href="#based---200-points">Based</a> y en <a href="#lets-warm-up---50-points">Let&rsquo;s Warm Up</a> notaremos que estos números son valores de ASCII, por lo que ya sea usando una herramienta online, o de forma manual, llegaremos a el siguiente valor con esos números:</p>
+¡Excelente! Si recordamos lo visto en <a href="#based---200-points">Based</a> y en <a href="#lets-warm-up---50-points">Let&rsquo;s Warm Up</a> notaremos que estos números son valores de ASCII, por lo que ya sea usando una herramienta online, o de forma manual, llegaremos a el siguiente valor con esos números: <code>rrrocknrn0113r</code></p>
+<h3 id="solución-8">Solución</h3>
+<div class="box">
+picoCTF{rrrocknrn0113r}
+</div>
 
     </article>
     
@@ -2980,8 +3185,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#solucion">Solucion</a></li>
       </ul>
     </li>
-    <li><a href="#flag_shop---300-points">flag_shop - 300 points</a></li>
-    <li><a href="#mus1c---300-points">mus1c - 300 points</a>
+    <li><a href="#flag_shop---300-points">flag_shop - 300 points</a>
       <ul>
         <li><a href="#descripción-9">Descripción</a>
           <ul>
@@ -2989,6 +3193,17 @@ document.addEventListener('DOMContentLoaded', function () {
           </ul>
         </li>
         <li><a href="#procedimiento-9">Procedimiento</a></li>
+      </ul>
+    </li>
+    <li><a href="#mus1c---300-points">mus1c - 300 points</a>
+      <ul>
+        <li><a href="#descripción-10">Descripción</a>
+          <ul>
+            <li><a href="#pistas-1">Pistas</a></li>
+          </ul>
+        </li>
+        <li><a href="#procedimiento-10">Procedimiento</a></li>
+        <li><a href="#solución-8">Solución</a></li>
       </ul>
     </li>
   </ul>
