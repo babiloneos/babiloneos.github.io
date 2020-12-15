@@ -1724,7 +1724,7 @@
 <div class="single__infos">
   <time class="single__info" title="Escrito en">📅&nbsp;2020-12-07 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo de lectura"> ☕&nbsp;12&nbsp;minutos lectura </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo de lectura"> ☕&nbsp;17&nbsp;minutos lectura </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="Escrito por">✍️&nbsp;Guillermo Ballesteros</span>
   
@@ -1750,7 +1750,10 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h2 id="2warm---50-points">2Warm - 50 points</h2>
+      <p>Año tras año se lleva a cabo un CTF organizado por Carnegie Mellon University llamado picoCTF, el cuál alberga retos desde lo más básico hasta avanzados, y al terminar la competición formal se libera la plataforma en Internet para que todos podamos resolver los retos y, aprender o bien reforzar conocimientos.</p>
+<p>Lo interesante de este CTF es la gran cantidad de retos que tiene, y a demás su variedad, pues alberga retos de Explotación Web, Criptografía, Ingeniería Inversa, Forencia, Explotación Binaria y Habilidades Generales. Son, en lo general, todas las categorías que se encuentran en los CTFs.</p>
+<p>Este año decidí empezar mi blog resolviendo los retos de picoCTF mientras estudio para retos más grandes, por lo que con este post declaro iniciado mi blog e iniciado mi reto con picoCTF 2020.</p>
+<h2 id="2warm---50-points">2Warm - 50 points</h2>
 <h3 id="descripción">Descripción</h3>
 <div class="box">Can you convert the number 42 (base 10) to binary (base 2)?</div>
 <h3 id="procedimiento">Procedimiento</h3>
@@ -1856,7 +1859,7 @@ XMdasaWpAXqIHqvFBYTt
 32VO1kKGW7st50mkv
 B2WqFg3mFhCfUyvG3sNEs9Ep3FYP2gEkUePqFgUVN30MAZtV
 zc2qhtc8wESHxGya1S9WpEXLgKo4D8ZrKODtQ4
-</code></pre><p>Y esto se extiende cientos de lineas, algo común en ejecutables. Pero si te dijas, hay una linea que nos dice que vamos por el camino correcto <code>Maybe try the 'strings' function? Take a look at the man page</code>. Pues bien, ya tenemos todos los strings, pero ¿cuál de todas esas cadenas es la Flag?</p>
+</code></pre><p>Y esto se extiende cientos de lineas, algo común en ejecutables. Pero si te fijas, hay una linea que nos dice que vamos por el camino correcto <code>Maybe try the 'strings' function? Take a look at the man page</code>. Pues bien, ya tenemos todos los strings, pero ¿cuál de todas esas cadenas es la Flag?</p>
 <p>Como ya mencioné antes, en todo CTF se tiene un formato para la bandera, en este caso <code>picoCTF{FLAG}</code>, y en situaciones como estas suelen poner la bandera completa para facilitarnos su ubicación, por lo que nuestro objetivo será ubicar una cadena que empiece con <em>picoCTF</em>, algo que podemos hacer con el comando <code>grep</code> de la forma siguiente:<br />
 <code>greo &quot;picoCTF&quot;</code><br />
 Así pues, si mandamos el resultado del <code>strings</code> a el <code>grep</code> deberíamos encontrar la respuesta.<br />
@@ -2413,8 +2416,295 @@ Let the character be my string at 2
 114</div><br />
 ¡Excelente! Si recordamos lo visto en <a href="#based---200-points">Based</a> y en <a href="#lets-warm-up---50-points">Let&rsquo;s Warm Up</a> notaremos que estos números son valores de ASCII, por lo que ya sea usando una herramienta online, o de forma manual, llegaremos a el siguiente valor con esos números: <code>rrrocknrn0113r</code></p>
 <h3 id="solución-8">Solución</h3>
-<div class="box">
+<p><div class="box">
 picoCTF{rrrocknrn0113r}
+</div><br />
+Lo siguiente fue añadido el 15 de Diciembre del 2020</p>
+<h2 id="1_wanna_b3_a_r0ck5tar---350-points">1_wanna_b3_a_r0ck5tar - 350 points</h2>
+<h3 id="descripción-11">Descripción</h3>
+<div class="box">I wrote you another song. Put the flag in the picoCTF{} flag format</div>
+<h3 id="procedimiento-01">Procedimiento 01</h3>
+<p>De nueva cuenta nos encontramos con un archivo que asemeja a una canción:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-lyrics.txt" data-lang="lyrics.txt">Rocknroll is right              
+Silence is wrong                
+A guitar is a six-string        
+Tommy&#39;s been down               
+Music is a billboard-burning razzmatazz!
+Listen to the music             
+If the music is a guitar                  
+Say &#34;Keep on rocking!&#34;                
+Listen to the rhythm
+If the rhythm without Music is nothing
+Tommy is rockin guitar
+Shout Tommy!                    
+Music is amazing sensation 
+Jamming is awesome presence
+Scream Music!                   
+Scream Jamming!                 
+Tommy is playing rock           
+Scream Tommy!       
+They are dazzled audiences                  
+Shout it!
+Rock is electric heaven                     
+Scream it!
+Tommy is jukebox god            
+Say it!                                     
+Break it down
+Shout &#34;Bring on the rock!&#34;
+Else Whisper &#34;That ain&#39;t it, Chief&#34;                 
+Break it down 
+</code></pre></td></tr></table>
+</div>
+</div><p>Análizando más a detalle el texto nos encontramos con estructuras como <em>if</em>, también volvemos a ver los <em>shout</em> por lo que sin duda se trata del mismo lenguaje de programación que el anterior reto.<br />
+Por desgracia, al intentar ejecutar el archivo con el compilador anteriormente usado nos encontramos con un error de  código que no nos permite avanzar, este error dice específicamente: <code>Error: BreakStatement cannot be applied to the block at line 25</code>. Así que tendrémos que buscar otra forma.<br />
+Releyendo el repositorio en Github de Rockstar nos encontramos con <a href="https://github.com/RockstarLang/rockstar#implementations">interpretes de este lenguaje a otros de uso común</a>, como JavaScript, Java, Pyton, etc. Por lo que probaremos interpretando el texto a código en Python para ánalizar lo que hace el programa y tal vez poder ejecutarlo sin errores.<br />
+El resultado es el siguiente:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-output.py" data-lang="output.py"><span class="n">Rocknroll</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">Silence</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">a_guitar</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Tommy</span> <span class="o">=</span> <span class="mi">44</span>
+<span class="n">Music</span> <span class="o">=</span> <span class="mi">170</span>
+<span class="n">the_music</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">the_music</span> <span class="o">==</span> <span class="n">a_guitar</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Keep on rocking!&#34;</span><span class="p">)</span>
+    <span class="n">the_rhythm</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">the_rhythm</span> <span class="o">-</span> <span class="n">Music</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">66</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="err">!</span><span class="p">)</span>
+        <span class="n">Music</span> <span class="o">=</span> <span class="mi">79</span>
+        <span class="n">Jamming</span> <span class="o">=</span> <span class="mi">78</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Music</span><span class="err">!</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Jamming</span><span class="err">!</span><span class="p">)</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">74</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="err">!</span><span class="p">)</span>
+        <span class="n">They</span> <span class="n">are</span> <span class="n">dazzled</span> <span class="n">audiences</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">it</span><span class="err">!</span><span class="p">)</span>
+        <span class="n">Rock</span> <span class="o">=</span> <span class="mi">86</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">it</span><span class="err">!</span><span class="p">)</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">73</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">it</span><span class="err">!</span><span class="p">)</span>
+        <span class="k">break</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Bring on the rock!&#34;</span><span class="p">)</span>
+        <span class="n">Else</span> <span class="k">print</span><span class="p">(</span><span class="s2">&#34;That ain&#39;t it, Chief&#34;</span><span class="p">)</span>
+        <span class="k">break</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Por desgracia esto también tiene errores en código, pero al ser un lenguaje más familiar para nosotros podemos corregirlo hasta que logremos hacerlo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-output_ejecutable.py" data-lang="output_ejecutable.py"><span class="n">Rocknroll</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">Silence</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">a_guitar</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Tommy</span> <span class="o">=</span> <span class="mi">44</span>
+<span class="n">Music</span> <span class="o">=</span> <span class="mi">170</span>
+<span class="n">the_music</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt;&#39;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">the_music</span> <span class="o">==</span> <span class="n">a_guitar</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Keep on rocking!&#34;</span><span class="p">)</span>
+    <span class="n">the_rhythm</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt;&#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">the_rhythm</span> <span class="o">-</span> <span class="n">Music</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">66</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="p">)</span>
+        <span class="n">Music</span> <span class="o">=</span> <span class="mi">79</span>
+        <span class="n">Jamming</span> <span class="o">=</span> <span class="mi">78</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Music</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Jamming</span><span class="p">)</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">74</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="p">)</span>
+        <span class="n">They</span> <span class="o">=</span> <span class="mi">79</span>       <span class="c1">#They are dazzled audiences</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">They</span><span class="p">)</span>     <span class="c1">#Decía it, pero se refería a Rock.</span>
+        <span class="n">Rock</span> <span class="o">=</span> <span class="mi">86</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Rock</span><span class="p">)</span>     <span class="c1">#Decía it, pero se refería a Rock.</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">73</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="p">)</span>    <span class="c1">#Decía it pero se refería a Tommy</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Bring on the rock!&#34;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;That ain&#39;t it, Chief&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Con un formato mucho más fácil de entender vemos que al ejecutar el código se nos pedira introducir un valor, al poner <code>10</code> nos pedirá otro número que debe ser <code>170</code> y entonces nos retornará una serie de números.<br />
+<div class="box"><p>cli: &gt; python3 output.py</p>
+<blockquote>
+<p>10<br />
+Keep on rocking!<br />
+170<br />
+66<br />
+79<br />
+78<br />
+74<br />
+79<br />
+86<br />
+73<br />
+Bring on the rock!</p>
+</blockquote>
+</div><br />
+Si tomamos los valores <strong>NO introducidos por nosotros</strong> y los pasamos a ASCII obtendremos la solución del reto.</p>
+<h3 id="procedimiento-02">Procedimiento 02</h3>
+<p>Durante el desarrollo de la annterior solución, en el paso de hacer ejecutable el código Python, me encontré con otra solución que nos permite prescindir de Python y el interprete.<br />
+En <a href="https://codewithrockstar.com/docs">esta página</a> podemos encontrar la documentación de Rockstar en un formato más amigable. Lo que nos interesaría es la sección de <strong>Poetic Number Literals</strong> y <strong>Loops</strong>. Después de darles una lectura rápda podemos comprender la falla al ejecutar el código Rockstar original:</p>
+<ul>
+<li><code>Break it down</code> no sirve para cerrar bloques if, debe ser un salto de línea en véz de eso.</li>
+<li>Existen definiciones de números que se reemplazan con texto aleatorio, del cual, para saber su valor, hay que contar las letras del texto de forma que cada palabla es 10 veces mayor a la palabra siguiente. Ej: abrir puerta, donde abrir vale 50 (5 letras) y puerta vale 6 (6 letras y multiplica por 10 a la palabra anterior), resultando en un valor de 56.<br />
+Con esto en cuenta y conocimiento fundamental de programación podemos leer, corregir y útilizar el código en lenguaje Rockstar.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-lyrics.txt" data-lang="lyrics.txt">Rocknroll is right              
+Silence is wrong                
+A guitar is a six-string        
+Tommy&#39;s been down               
+Music is a billboard-burning razzmatazz!
+Listen to the music             
+If the music is a guitar                  
+Say &#34;Keep on rocking!&#34;                
+Listen to the rhythm
+If the rhythm without Music is nothing
+Tommy is rockin guitar
+Shout Tommy!                    
+Music is amazing sensation 
+Jamming is awesome presence
+Scream Music!                   
+Scream Jamming!                 
+Tommy is playing rock           
+Scream Tommy!       
+They are dazzled audiences                  
+Shout it!
+Rock is electric heaven                     
+Scream it!
+Tommy is jukebox god            
+Say it!                                     
+
+Shout &#34;Bring on the rock!&#34;
+Else Whisper &#34;That ain&#39;t it, Chief&#34;                 
+
+</code></pre></td></tr></table>
+</div>
+</div><p>Obviamente para entenderlo en su totalidad habrá que leer la documentación anterior, pero no resultará en un problema significativo. A demás, en cualquiera de ambos casos habría que leer la documentación pues el interprete Rockstar a Python falla en una línea: <code>They are dazzled audiences</code> y para poder corregirla se necesita comprender el lenguaje Rockstar. Si no se corrige esa línea, obtendríamos una solución incompleta.</p>
+<h3 id="solución-9">Solución</h3>
+<div class="box">
+picoCTF{BONJOVI}
 </div>
 
     </article>
@@ -3204,6 +3494,14 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>
         <li><a href="#procedimiento-10">Procedimiento</a></li>
         <li><a href="#solución-8">Solución</a></li>
+      </ul>
+    </li>
+    <li><a href="#1_wanna_b3_a_r0ck5tar---350-points">1_wanna_b3_a_r0ck5tar - 350 points</a>
+      <ul>
+        <li><a href="#descripción-11">Descripción</a></li>
+        <li><a href="#procedimiento-01">Procedimiento 01</a></li>
+        <li><a href="#procedimiento-02">Procedimiento 02</a></li>
+        <li><a href="#solución-9">Solución</a></li>
       </ul>
     </li>
   </ul>

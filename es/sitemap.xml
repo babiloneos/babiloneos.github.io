@@ -20,6 +20,16 @@
   <url>
     <loc>https://babiloneos.github.io/tags/bash/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/tags/bash/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/tags/bash/"
+                />
   </url>
   
   <url>
@@ -70,6 +80,16 @@
   <url>
     <loc>https://babiloneos.github.io/tags/linux/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/tags/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/tags/linux/"
+                />
   </url>
   
   <url>

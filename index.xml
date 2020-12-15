@@ -50,9 +50,8 @@
         <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
         <atom:modified>Mon, 07 Dec 2020 00:00:00 +0000</atom:modified>
         <guid>https://babiloneos.github.io/posts/general_skills_picoctf_2020/</guid>
-        <description>2Warm - 50 points Descripción Can you convert the number 42 (base 10) to binary (base 2)? Procedimiento Este reto es el más sencillo, y lo digo sin miedo a equivocarme. Lo único que necesitamos es saber conversión de bases, o más fácil, tener una calculadora.
-Para facilitar el trabajo usaré una calculadora en modo programador. Simplemente inntroducimos el valor decimal y nos retorna el mismo valor en binario.
-Calculadora:</description>
+        <description>Año tras año se lleva a cabo un CTF organizado por Carnegie Mellon University llamado picoCTF, el cuál alberga retos desde lo más básico hasta avanzados, y al terminar la competición formal se libera la plataforma en Internet para que todos podamos resolver los retos y, aprender o bien reforzar conocimientos.
+Lo interesante de este CTF es la gran cantidad de retos que tiene, y a demás su variedad, pues alberga retos de Explotación Web, Criptografía, Ingeniería Inversa, Forencia, Explotación Binaria y Habilidades Generales.</description>
         
         <dc:creator>Guillermo Ballesteros</dc:creator>
         

@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>general skills on Babiloneos</title>
+    <title>General skills on Babiloneos</title>
     <link>https://babiloneos.github.io/en/tags/general-skills/</link>
-    <description>Recent content in general skills on Babiloneos</description>
+    <description>Recent content in General skills on Babiloneos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>babiloneos@gmail.com (Guillermo Ballesteros)</managingEditor>
@@ -29,7 +29,8 @@
         <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
         <atom:modified>Mon, 07 Dec 2020 00:00:00 +0000</atom:modified>
         <guid>https://babiloneos.github.io/en/posts/general_skills_picoctf_2020/</guid>
-        <description></description>
+        <description>Year after year Carnegie Mellon University organize picoCTF, a CTF with challenges from the very basic to advanced, and at the end of the competition all is put to Internet so it can be solved by anyone.
+The most interesting thing of this CTF is the amount of challenge and the variety. It has exploitation Web, criptography, reverse engineering, forensic, binary exploitation and general skills. Those are, generally, all the challenge&amp;rsquo;s category on any CTF.</description>
         
         <dc:creator>Guillermo Ballesteros</dc:creator>
         
@@ -38,11 +39,15 @@
         
           
             
-              <category>base64</category>
+              <category>Bash</category>
             
           
             
-              <category>general skills</category>
+              <category>Linux</category>
+            
+          
+            
+              <category>General skills</category>
             
           
         

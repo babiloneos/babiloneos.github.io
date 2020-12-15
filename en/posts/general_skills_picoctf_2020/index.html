@@ -1323,10 +1323,10 @@
 
 
     
-<meta name="description" content="Solution to General Skills category&#39;s challenges on picoCTF 2020" />
+<meta name="description" content="picoCTF 2020 General Skill&#39;s challenges writeups." />
 
 
-<meta name="keywords" content="base64,general skills">
+<meta name="keywords" content="Bash,Linux,General skills">
 
 <meta name="created" content="2020-12-07T00:00:00&#43;0000">
 <meta name="modified" content="2020-12-07T00:00:00&#43;0000">
@@ -1340,7 +1340,7 @@
 <meta property="og:title" content="Solving General Skills - picoCTF 2020">
 <meta property="og:url" content="https://babiloneos.github.io/en/posts/general_skills_picoctf_2020/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="Solution to General Skills category&#39;s challenges on picoCTF 2020">
+<meta property="og:description" content="picoCTF 2020 General Skill&#39;s challenges writeups.">
 
 <meta name="generator" content="Hugo 0.79.0" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1381,8 +1381,8 @@
     "datePublished": "2020-12-07T00:00:00Z",
     "dateModified": "2020-12-07T00:00:00Z",
     "url" : "https://babiloneos.github.io/en/posts/general_skills_picoctf_2020/",
-    "description": "Solution to General Skills category's challenges on picoCTF 2020",
-    "keywords": ["base64","general skills"],
+    "description": "picoCTF 2020 General Skill's challenges writeups.",
+    "keywords": ["Bash","Linux","General skills"],
     "author": {
       "@type": "Person",
       "name": "Guillermo Ballesteros"
@@ -1724,7 +1724,7 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Dec 7, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;0&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;16&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Guillermo Ballesteros</span>
   
@@ -1739,16 +1739,970 @@
   🏷️
   
 
-  <li><a href="https://babiloneos.github.io/en/tags/base64/" class="single__tag" title="base64">#base64</a></li>
+  <li><a href="https://babiloneos.github.io/en/tags/bash/" class="single__tag" title="Bash">#Bash</a></li>
 
-  <li><a href="https://babiloneos.github.io/en/tags/general-skills/" class="single__tag" title="general skills">#general skills</a></li>
+  <li><a href="https://babiloneos.github.io/en/tags/linux/" class="single__tag" title="Linux">#Linux</a></li>
+
+  <li><a href="https://babiloneos.github.io/en/tags/general-skills/" class="single__tag" title="General skills">#General skills</a></li>
 
 </ul>
 
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
+      <p>Year after year Carnegie Mellon University organize picoCTF, a CTF with challenges from the very basic to advanced, and at the end of the competition all is put to Internet so it can be solved by anyone.</p>
+<p>The most interesting thing of this CTF is the amount of challenge and the variety. It has exploitation Web, criptography, reverse engineering, forensic, binary exploitation and general skills. Those are, generally, all the challenge&rsquo;s category on any CTF.</p>
+<p>This year I decided to start my blog by solving some picoCTF&rsquo;s challenges while i&rsquo;m studying for bigger challenges, so with this post I begin my blog and my picoCTF 2020 challenge.</p>
+<h2 id="2warm---50-points">2Warm - 50 points</h2>
+<h3 id="description">Description</h3>
+<div class="box">Can you convert the number 42 (base 10) to binary (base 2)?</div>
+<h3 id="procedure">Procedure</h3>
+<p>This challenge is the easiest, all we have to know is the conversion of numbers by base or even easier, have a calculator. I&rsquo;ll use my computer calculator in programmer mode. I just put the decimal value 42 and the calculator return us the same value but in binary.<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/2Warm_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+    <figcaption style="text-align: center;">
+      <strong>Calculadora</strong>:
       
+    </figcaption>
+  
+</figure><br />
+As seen, the solution is 101010 but we have to put it in the CTF format, as in any other CTF.</p>
+<h3 id="solution">Solution</h3>
+<div class="box">
+picoCTF{101010} 
+</div>
+<h2 id="-translation-pending">::: Translation pending!!!</h2>
+<h2 id="warmed-up---50-points">Warmed Up - 50 points</h2>
+<h3 id="description-1">Description</h3>
+<div class="box">What is 0x3D (base 16) in decimal (base 10)?</div>
+<h3 id="procedure-1">Procedure</h3>
+<p>Another easy challenge abput changing numbers base. Just as before, I&rsquo;ll use my computer&rsquo;s calculator.<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/WarmUp_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+    <figcaption style="text-align: center;">
+      <strong>Calculadora</strong>:
+      
+    </figcaption>
+  
+</figure></p>
+<h3 id="solution-1">Solution</h3>
+<div class="box">
+picoCTF{61} 
+</div>
+<h2 id="lets-warm-up---50-points">Lets Warm Up - 50 points</h2>
+<h3 id="description-2">Description</h3>
+<div class="box">If I told you a word started with 0x70 in hexadecimal, what would it start with in ASCII?</div>
+<h3 id="procedure-2">Procedure</h3>
+<p>In this case is not change of number base, but a conversion of values. This conversion is as simple as look up in a table for the 0x70 value. Specifically, the ASCII table, jus like this one:<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/LetsWarmUp_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+    <figcaption style="text-align: center;">
+      <strong>TablaASCII</strong>:
+      
+    </figcaption>
+  
+</figure></p>
+<h3 id="solution-2">Solution</h3>
+<div class="box">
+picoCTF{p} 
+</div>
+<h2 id="strings-it---100-points">Strings it - 100 points</h2>
+<h3 id="description-3">Description</h3>
+<div class="box">Can you find the flag in file without running it?</div>
+<h3 id="procedure-3">Procedure</h3>
+<p>The refered file is a <em>.deb</em> executable file. Also, this challenge&rsquo;s name tell us what to do. There is a bash command called <em>strings</em> which returns every character string in any file. Used in this <em>.deb</em> file we get:</p>
+<pre><code class="language-[" data-lang="[">~/Downloads/picoCTF2020 &gt; strings bat_0.17.1_amd64.deb
+/lib64/ld-linux-x86-64.so.2
+libc.so.6
+puts
+stdout
+__cxa_finalize
+setvbuf
+__libc_start_main
+GLIBC_2.2.5
+__gmon_start__
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+=11'
+=g	 
+=j	 
+AWAVI
+AUATL
+[]A\A]A^A_
+Maybe try the 'strings' function? Take a look at the man page
+;*3$&quot;
+XMdasaWpAXqIHqvFBYTt
+32VO1kKGW7st50mkv
+B2WqFg3mFhCfUyvG3sNEs9Ep3FYP2gEkUePqFgUVN30MAZtV
+zc2qhtc8wESHxGya1S9WpEXLgKo4D8ZrKODtQ4
+</code></pre><p>And this continued by hundred of lines, something usual in executable files. But if you look closelly at it, there&rsquo;s a line telling us we are in the right path <code>Maybe try the 'strings' function? Take a look at the man page</code>. Well then, we have all the strings, but which one is the Flag?<br />
+As I told earlier, every CTF has his own Flag format, <code>picoCTF{FLAG}</code> in this case. And in challenges like this one, we will usually find the flag in that format. So we should search for some line which begins with <em>picoCTF</em>, a task that we can solve with the command <code>grep</code> using it like this:<br />
+<code>greo &quot;picoCTF&quot;</code><br />
+If we take the output of the <code>strings</code> command and send it to <code>grep</code> we&rsquo;ll surelly find the solution:<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/StringsIt_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+And we do.</p>
+<h3 id="solution-3">Solution</h3>
+<div class="box">
+picoCTF{5tRIng5_1T_827aee91}
+</div>
+<h2 id="bases---100-points">Bases - 100 points</h2>
+<h3 id="description-4">Description</h3>
+<div class="box">What does this <strong>bDNhcm5fdGgzX3IwcDM1</strong> mean? I think it has something to do with bases.</div>
+<h3 id="procedure-4">Procedure</h3>
+<p>Again, we found a hint in the name of the challenge. This time is about bases, a kind of criptography or hiding based on taking an array of characters, get its binary value of all them togethern then dividing them on groups of 6 bits an geting the character of every 6-bit value. You can learn more in <a href="https://en.wikipedia.org/wiki/Base64#Examples">this wikipedia&rsquo;s example</a>.<br />
+For this kind of challenge I usually use online tools, because is easier and faster. As we&rsquo;re talking about bases, the most used is Base64, so it&rsquo;ll be the first to test, using the page <a href="https://www.base64decode.org/">base64decode</a>, where you just have to paste your encoded string and push the DECODE button.<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/Base_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+The result looks kinda weird, but replacing the numbers for letters you can find some interesting text, which indicates we find the solution.</p>
+<h3 id="solution-4">Solution</h3>
+<div class="box">
+picoCTF{l3arn_th3_r0p35}
+</div>
+<h2 id="first-grep---100-points">First Grep - 100 points</h2>
+<h3 id="description-5">Description</h3>
+<div class="box">Can you find the flag in <em>file</em>? This would be really tedious to look through manually, something tells me there is a better way.</div>
+<h2 id="-translation-pending-1">&raquo;&raquo; Translation pending!!!</h2>
+<h3 id="procedure-5">Procedure</h3>
+<p>Este reto es extremadamente similar a strings, pues el nombre ya nos dice que hacer y de nueva forma, se basa en usar <em>grep</em>. Sin embargo, esta vez no tenemos un archivo ejecutable, sino un archivo de texto por lo que, pese a ser útil el comando <em>strings</em>, lo ideal sería usar el comando <code>cat</code>.<br />
+El comando <code>cat</code> realmente funciona para concatenar el contenido de dos archivos y lo mostrará como output, sin embargo, si solo se le pasa como argumento un archivo, mostrará el contenido de ese archivo como output. Usando este output en grep nos terminaría dando el mismo resultado que se obtuvo en el reto antes mencionado.<br />
+El comando final debería quedar algo así:</p>
+<pre><code>strings file | grep &quot;picoCTF&quot;
+</code></pre><figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/FirstGrep_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure>
+<h3 id="solution-5">Solution</h3>
+<div class="box">
+picoCTF{grep_is_good_to_find_things_dba08a45}
+</div>
+<h2 id="whays-a-net-cat---100-points">whay&rsquo;s a net cat? - 100 points</h2>
+<h3 id="description-6">Description</h3>
+<div class="box">Using netcat (nc) is going to be pretty important. Can you connect to <em>jupiter.challenges.picoctf.org</em> at port <em>64287</em> to get the flag?</div>
+<h3 id="procedure-6">Procedure</h3>
+<p>Esta vez todo está claro desde el nombre y la Description: debemos usar netcat en la url y puerto indicados.<br />
+Netcat es una herramienta que permite asociar un script a un puerto específico de la IP publica propia. La forma de usarlo sería:</p>
+<pre><code>nc jupiter.challenges.picoctf.org 64287
+</code></pre><figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/whatsanetcat_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure>
+<h3 id="solution-6">Solution</h3>
+<div class="box">
+picoCTF{nEtCat_Mast3ry_284be8f7}
+</div>
+<h2 id="plumbing---200-points">plumbing - 200 points</h2>
+<h3 id="description-7">Description</h3>
+<p>Sometimes you need to handle process data outside of a file. Can you find a way to keep the output from this program and search for the flag? Connect to <em>jupiter.challenges.picoctf.org 7480</em>.</p>
+<h3 id="procedure-7">Procedure</h3>
+<p>Por primera vez las cosas no parecen del todo claras, sin embargo recordando cómo usamos <code>grep</code> y <code>nc</code> podríamos guiarnos. La primer idea que se me viene a la mente es revisar la salida del netcar especificada:<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/plumbing_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+La salida es larga y repetitiva. Siguiendo con mi idea, habría que mandar esta salida al <code>grep</code> para que nos muestre directamente la linea que tenga <em>picoCTF</em> en ella:</p>
+<pre><code>nc jupiter.challenges.picoctf.org 7480 | grep &quot;picoCTF&quot;
+</code></pre><p><figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/plumbing_02.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+Funcionó. Como se observa, toda salida en la terminal se puede enviar a grep para buscar información específica.</p>
+<h3 id="solution-7">Solution</h3>
+<div class="box">
+picoCTF{digital_plumb3r_06e9d954}
+</div>
+<h2 id="based---200-points">Based - 200 points</h2>
+<h3 id="description-8">Description</h3>
+<div class="box">To get truly 1337, you must understand different data encodings, such as hexadecimal or binary. Can you get the flag from this program to prove you are on the way to becoming 1337? Connect with <em>nc jupiter.challenges.picoctf.org 29221</em>.</div>
+<h3 id="procedure-8">Procedure</h3>
+<p>Para hacernos una idea de a qué nos enfrentamos, haré el netcat para ver qué me muestra:<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/Based_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+Pues bien, tenemos un reto contrareloj y que al menos en la primer parte nos pide conversión de valores. Se me ocurren dos soluciones: hacer uno por uno de forma manual, o hacer un script de python, o bash, para que lo resuelva por nosotros. Yo me iré por la opción más rápida que es resolverlo de forma manual. Y para hacerlo aún más rápido usaré herramientas online.</p>
+<h4 id="primer-paso">Primer paso</h4>
+<p>Para el valor binario usaré este <a href="https://codebeautify.org/binary-string-converter">convertidor de Binario a String</a>:<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/Based_02.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+¡Bien! tenemos la primer palabra: <code>street</code>. Al introducirla en la terminal obtenemos la siguiente respuesta:<br />
+<div class="box">
+Please give me the  163 154 165 144 147 145 as a word.
+Input:
+</div></p>
+<h4 id="segundo-paso">Segundo paso</h4>
+<p>Parece que la siguiente palabra tiene valores entre 140 y 170, lo cual me hace pensar que son valores decimales de ASCII, pero al revisar la tabla (que encontrarás en <a href="#lets-warm-up---50-points">Lets Warm Up</a>), notamos que ASCII solo llega hasta el 127 así que descartamos la idea.<br />
+Podríamos pensar que es otro tipo de codificación para caracteres, pero la verdad es que todas se basan en ASCII por lo que valores más allá de 127 no serán caracteres del alfabeto inglés. Mirando un poco más de cerca los valores a decodificar notamos que no hay ningún 8 o 9, así que se podría tratar de un valor octal, donde el 141 es equivalente a 97 decimal, o <em>a</em> en ASCII. Suena muy bien la idea, así que usaremos <a href="https://cryptii.com/pipes/decimal-text">esta página</a> que convierte de Octal a ASCII.<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/Based_03.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+Al introducir la palabra obtenida en la terminal obtenemos:<br />
+<div class="box">
+Please give me the 736f636b6574 as a word.
+Input:
+</div></p>
+<h4 id="tercer-paso">Tercer paso</h4>
+<p>Observamos valores númericos normales, pero también letras, y también notamos que tenemos una cantidad par de caracteres, específicamente 12. Todo esto me hace pensar en Hexadecimal, que tendría sentido siguiendo el patrón establecido por los dos pasos anteriores.<br />
+Usando la misma herramienta que con el paso anterior, pero el valor introducido lo dividiremos en pares.<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/Based_04.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+¡Genial! lo introducimos en la terminal y obtenemos:</p>
+<h3 id="solucion">Solucion</h3>
+<div class="box">
+You've beaten the challenge
+Flag: picoCTF{learning_about_converting_values_00a975ff}
+</div>
+<h2 id="flag_shop---300-points">flag_shop - 300 points</h2>
+<h3 id="description-9">Description</h3>
+<div class="box">There&rsquo;s a flag shop selling stuff, can you buy a flag? <em>Source</em>. Connect with <code>nc jupiter.challenges.picoctf.org 4906</code>.</div>
+<h4 id="pistas">Pistas</h4>
+<div class="expand">
+  <button type="button" class="expand__button" aria-label="Expand Button">
+    <span class="expand-icon expand-icon__right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+    </span>
+    Pistas
+  </button>
+  <div class="expand__content">
+    Two&rsquo;s compliment can do some weird things when numbers get really big!
+  </div>
+</div>
+<h3 id="procedure-9">Procedure</h3>
+<p>Nos proporcionan un código fuente en C que nos explica un poco de qué trata el reto:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-store.c" data-lang="store.c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">setbuf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">con</span><span class="p">;</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">account_balance</span> <span class="o">=</span> <span class="mi">1100</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">con</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+        
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Welcome to the flag exchange</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;We sell flags</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">1. Check Account Balance</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">2. Buy Flags</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">3. Exit</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">menu</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s"> Enter a menu selection</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">menu</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">menu</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\n</span><span class="s"> Balance: %d </span><span class="se">\n\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">account_balance</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">menu</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Currently for sale</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;1. Defintely not the flag Flag</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;2. 1337 Flag</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">auction_choice</span><span class="p">;</span>
+            <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+            <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">auction_choice</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">auction_choice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;These knockoff Flags cost 900 each, enter desired quantity</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                
+                <span class="kt">int</span> <span class="n">number_flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+                <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">number_flags</span><span class="p">);</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">number_flags</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
+                    <span class="kt">int</span> <span class="n">total_cost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                    <span class="n">total_cost</span> <span class="o">=</span> <span class="mi">900</span><span class="o">*</span><span class="n">number_flags</span><span class="p">;</span>
+                    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The final cost is: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">total_cost</span><span class="p">);</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">total_cost</span> <span class="o">&lt;=</span> <span class="n">account_balance</span><span class="p">){</span>
+                        <span class="n">account_balance</span> <span class="o">=</span> <span class="n">account_balance</span> <span class="o">-</span> <span class="n">total_cost</span><span class="p">;</span>
+                        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Your current balance after transaction: %d</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">account_balance</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="k">else</span><span class="p">{</span>
+                        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Not enough funds to complete purchase</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                    <span class="p">}</span>
+                                    
+                    
+                <span class="p">}</span>
+                    
+                    
+                    
+                
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">auction_choice</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;1337 flags cost 100000 dollars, and we only have 1 in stock</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Enter 1 to buy one&#34;</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">bid</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="n">fflush</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+                <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">bid</span><span class="p">);</span>
+                
+                <span class="k">if</span><span class="p">(</span><span class="n">bid</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+                    
+                    <span class="k">if</span><span class="p">(</span><span class="n">account_balance</span> <span class="o">&gt;</span> <span class="mi">100000</span><span class="p">){</span>
+                        <span class="n">FILE</span> <span class="o">*</span><span class="n">f</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;flag.txt&#34;</span><span class="p">,</span> <span class="s">&#34;r&#34;</span><span class="p">);</span>
+                        <span class="k">if</span><span class="p">(</span><span class="n">f</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+
+                            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;flag not found: please run this on the server</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                            <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+                        <span class="p">}</span>
+                        <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">64</span><span class="p">];</span>
+                        <span class="n">fgets</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+                        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;YOUR FLAG IS: %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+                        <span class="p">}</span>
+                    
+                    <span class="k">else</span><span class="p">{</span>
+                        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Not enough funds for transaction</span><span class="se">\n\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+                    <span class="p">}}</span>
+
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="n">con</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Solution pendiente :) pero desde ya se ve que trata de explotación binaria por buffer overflow.</p>
+<h2 id="mus1c---300-points">mus1c - 300 points</h2>
+<h3 id="description-10">Description</h3>
+<div class="box">I wrote you a <em>song</em>. Put it in the picoCTF{} flag format.</div>
+<h4 id="pistas-1">Pistas</h4>
+<div class="expand">
+  <button type="button" class="expand__button" aria-label="Expand Button">
+    <span class="expand-icon expand-icon__right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+    </span>
+    Pistas
+  </button>
+  <div class="expand__content">
+    Do you think you can master rockstar?
+  </div>
+</div>
+<h3 id="procedure-10">Procedure</h3>
+<p>La <em>canción</em> que se menciona en la Description es esta:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-lyrics.txt" data-lang="lyrics.txt">Pico&#39;s a CTFFFFFFF
+my mind is waitin
+It&#39;s waitin
+
+Put my mind of Pico into This
+my flag is not found
+put This into my flag
+put my flag into Pico
+
+
+shout Pico
+shout Pico
+shout Pico
+
+My song&#39;s something
+put Pico into This
+
+Knock This down, down, down
+put This into CTF
+
+shout CTF
+my lyric is nothing
+Put This without my song into my lyric
+Knock my lyric down, down, down
+
+shout my lyric
+
+Put my lyric into This
+Put my song with This into my lyric
+Knock my lyric down
+
+shout my lyric
+
+Build my lyric up, up ,up
+
+shout my lyric
+shout Pico
+shout It
+
+Pico CTF is fun
+security is important
+Fun is fun
+Put security with fun into Pico CTF
+Build Fun up
+shout fun times Pico CTF
+put fun times Pico CTF into my song
+
+build it up
+
+shout it
+shout it
+
+build it up, up
+shout it
+shout Pico
+</code></pre></td></tr></table>
+</div>
+</div><p>Como podrán observar, es muy confuso lo que se debería hacer y es aquí donde entra uno de los consejos que da <a href="https://www.youtube.com/user/RootOfTheNull">John Hammond</a>, un famoso youtuber que desde hace años resuelve CTFs, sobre usar google como aliado. Si analizamos un poco más cuidadosamente el archivo nos daremos cuenta que tiene una estructura peculiar, obvio simula estrofas, pero también pareciera un código de programación.<br />
+Podríamos guiarnos de ello y buscar en google algún lenguaje que use shout, build, y put, pero en vez de eso podríamos apoyarnos en las Pistas (o hints) que mencionan <code>master rockstar</code>. Busquemos eso en google:<br />
+<figure >
+  
+  
+  
+    <img data-src="/images/picoCTF/mus1c_01.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
+¡Ahí está! Encontramos el repositorio en GitHub de un Lenguaje de Programación llamado <a href="https://github.com/RockstarLang/rockstar"><strong>Rockstar</strong></a>. No hay muchas pruebas de que se trate de lo que buscamos, pero mirando las especificaciones nos encontramos con ejemplos como:</p>
+<pre><code class="language-arrays_Rockstar" data-lang="arrays_Rockstar">Let my string be &quot;abcdefg&quot;
+Shout my string at 0 (will print &quot;a&quot;)
+Shout my string at 1 (will print &quot;b&quot;)
+Let the character be my string at 2
+</code></pre><p>Que nos dicen que en efecto esto es lo que buscamos. Mirando un poco más el repositorio nos encontramos con el compilador <a href="https://github.com/gaborsch/rocky">Rocky</a> que está basado en Java, así que lo descargamos, compilamos el <em>.txt</em> que tenemos y el resultado es:<br />
+<div class="box"><code>&gt; ./rocky.jar programs/lyrics.txt</code><br />
+114<br />
+114<br />
+114<br />
+111<br />
+99<br />
+107<br />
+110<br />
+114<br />
+110<br />
+48<br />
+49<br />
+49<br />
+51<br />
+114</div><br />
+¡Excelente! Si recordamos lo visto en <a href="#based---200-points">Based</a> y en <a href="#lets-warm-up---50-points">Let&rsquo;s Warm Up</a> notaremos que estos números son valores de ASCII, por lo que ya sea usando una herramienta online, o de forma manual, llegaremos a el siguiente valor con esos números: <code>rrrocknrn0113r</code></p>
+<h3 id="solution-8">Solution</h3>
+<p><div class="box">
+picoCTF{rrrocknrn0113r}
+</div><br />
+Lo siguiente fue añadido el 15 de Diciembre del 2020</p>
+<h2 id="1_wanna_b3_a_r0ck5tar---350-points">1_wanna_b3_a_r0ck5tar - 350 points</h2>
+<h3 id="description-11">Description</h3>
+<div class="box">I wrote you another song. Put the flag in the picoCTF{} flag format</div>
+<h3 id="procedure-01">Procedure 01</h3>
+<p>De nueva cuenta nos encontramos con un archivo que asemeja a una canción:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-lyrics.txt" data-lang="lyrics.txt">Rocknroll is right              
+Silence is wrong                
+A guitar is a six-string        
+Tommy&#39;s been down               
+Music is a billboard-burning razzmatazz!
+Listen to the music             
+If the music is a guitar                  
+Say &#34;Keep on rocking!&#34;                
+Listen to the rhythm
+If the rhythm without Music is nothing
+Tommy is rockin guitar
+Shout Tommy!                    
+Music is amazing sensation 
+Jamming is awesome presence
+Scream Music!                   
+Scream Jamming!                 
+Tommy is playing rock           
+Scream Tommy!       
+They are dazzled audiences                  
+Shout it!
+Rock is electric heaven                     
+Scream it!
+Tommy is jukebox god            
+Say it!                                     
+Break it down
+Shout &#34;Bring on the rock!&#34;
+Else Whisper &#34;That ain&#39;t it, Chief&#34;                 
+Break it down 
+</code></pre></td></tr></table>
+</div>
+</div><p>Análizando más a detalle el texto nos encontramos con estructuras como <em>if</em>, también volvemos a ver los <em>shout</em> por lo que sin duda se trata del mismo lenguaje de programación que el anterior reto.<br />
+Por desgracia, al intentar ejecutar el archivo con el compilador anteriormente usado nos encontramos con un error de  código que no nos permite avanzar, este error dice específicamente: <code>Error: BreakStatement cannot be applied to the block at line 25</code>. Así que tendrémos que buscar otra forma.<br />
+Releyendo el repositorio en Github de Rockstar nos encontramos con <a href="https://github.com/RockstarLang/rockstar#implementations">interpretes de este lenguaje a otros de uso común</a>, como JavaScript, Java, Pyton, etc. Por lo que probaremos interpretando el texto a código en Python para ánalizar lo que hace el programa y tal vez poder ejecutarlo sin errores.<br />
+El resultado es el siguiente:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-output.py" data-lang="output.py"><span class="n">Rocknroll</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">Silence</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">a_guitar</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Tommy</span> <span class="o">=</span> <span class="mi">44</span>
+<span class="n">Music</span> <span class="o">=</span> <span class="mi">170</span>
+<span class="n">the_music</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">the_music</span> <span class="o">==</span> <span class="n">a_guitar</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Keep on rocking!&#34;</span><span class="p">)</span>
+    <span class="n">the_rhythm</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">the_rhythm</span> <span class="o">-</span> <span class="n">Music</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">66</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="err">!</span><span class="p">)</span>
+        <span class="n">Music</span> <span class="o">=</span> <span class="mi">79</span>
+        <span class="n">Jamming</span> <span class="o">=</span> <span class="mi">78</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Music</span><span class="err">!</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Jamming</span><span class="err">!</span><span class="p">)</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">74</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="err">!</span><span class="p">)</span>
+        <span class="n">They</span> <span class="n">are</span> <span class="n">dazzled</span> <span class="n">audiences</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">it</span><span class="err">!</span><span class="p">)</span>
+        <span class="n">Rock</span> <span class="o">=</span> <span class="mi">86</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">it</span><span class="err">!</span><span class="p">)</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">73</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">it</span><span class="err">!</span><span class="p">)</span>
+        <span class="k">break</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Bring on the rock!&#34;</span><span class="p">)</span>
+        <span class="n">Else</span> <span class="k">print</span><span class="p">(</span><span class="s2">&#34;That ain&#39;t it, Chief&#34;</span><span class="p">)</span>
+        <span class="k">break</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Por desgracia esto también tiene errores en código, pero al ser un lenguaje más familiar para nosotros podemos corregirlo hasta que logremos hacerlo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-output_ejecutable.py" data-lang="output_ejecutable.py"><span class="n">Rocknroll</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">Silence</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">a_guitar</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Tommy</span> <span class="o">=</span> <span class="mi">44</span>
+<span class="n">Music</span> <span class="o">=</span> <span class="mi">170</span>
+<span class="n">the_music</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt;&#39;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">the_music</span> <span class="o">==</span> <span class="n">a_guitar</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Keep on rocking!&#34;</span><span class="p">)</span>
+    <span class="n">the_rhythm</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt;&#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">the_rhythm</span> <span class="o">-</span> <span class="n">Music</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">66</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="p">)</span>
+        <span class="n">Music</span> <span class="o">=</span> <span class="mi">79</span>
+        <span class="n">Jamming</span> <span class="o">=</span> <span class="mi">78</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Music</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Jamming</span><span class="p">)</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">74</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="p">)</span>
+        <span class="n">They</span> <span class="o">=</span> <span class="mi">79</span>       <span class="c1">#They are dazzled audiences</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">They</span><span class="p">)</span>     <span class="c1">#Decía it, pero se refería a Rock.</span>
+        <span class="n">Rock</span> <span class="o">=</span> <span class="mi">86</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Rock</span><span class="p">)</span>     <span class="c1">#Decía it, pero se refería a Rock.</span>
+        <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">73</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="p">)</span>    <span class="c1">#Decía it pero se refería a Tommy</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Bring on the rock!&#34;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;That ain&#39;t it, Chief&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Con un formato mucho más fácil de entender vemos que al ejecutar el código se nos pedira introducir un valor, al poner <code>10</code> nos pedirá otro número que debe ser <code>170</code> y entonces nos retornará una serie de números.<br />
+<div class="box"><p>cli: &gt; python3 output.py</p>
+<blockquote>
+<p>10<br />
+Keep on rocking!<br />
+170<br />
+66<br />
+79<br />
+78<br />
+74<br />
+79<br />
+86<br />
+73<br />
+Bring on the rock!</p>
+</blockquote>
+</div><br />
+Si tomamos los valores <strong>NO introducidos por nosotros</strong> y los pasamos a ASCII obtendremos la Solution del reto.</p>
+<h3 id="procedure-02">Procedure 02</h3>
+<p>Durante el desarrollo de la annterior Solution, en el paso de hacer ejecutable el código Python, me encontré con otra Solution que nos permite prescindir de Python y el interprete.<br />
+En <a href="https://codewithrockstar.com/docs">esta página</a> podemos encontrar la documentación de Rockstar en un formato más amigable. Lo que nos interesaría es la sección de <strong>Poetic Number Literals</strong> y <strong>Loops</strong>. Después de darles una lectura rápda podemos comprender la falla al ejecutar el código Rockstar original:</p>
+<ul>
+<li><code>Break it down</code> no sirve para cerrar bloques if, debe ser un salto de línea en véz de eso.</li>
+<li>Existen definiciones de números que se reemplazan con texto aleatorio, del cual, para saber su valor, hay que contar las letras del texto de forma que cada palabla es 10 veces mayor a la palabra siguiente. Ej: abrir puerta, donde abrir vale 50 (5 letras) y puerta vale 6 (6 letras y multiplica por 10 a la palabra anterior), resultando en un valor de 56.<br />
+Con esto en cuenta y conocimiento fundamental de programación podemos leer, corregir y útilizar el código en lenguaje Rockstar.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-lyrics.txt" data-lang="lyrics.txt">Rocknroll is right              
+Silence is wrong                
+A guitar is a six-string        
+Tommy&#39;s been down               
+Music is a billboard-burning razzmatazz!
+Listen to the music             
+If the music is a guitar                  
+Say &#34;Keep on rocking!&#34;                
+Listen to the rhythm
+If the rhythm without Music is nothing
+Tommy is rockin guitar
+Shout Tommy!                    
+Music is amazing sensation 
+Jamming is awesome presence
+Scream Music!                   
+Scream Jamming!                 
+Tommy is playing rock           
+Scream Tommy!       
+They are dazzled audiences                  
+Shout it!
+Rock is electric heaven                     
+Scream it!
+Tommy is jukebox god            
+Say it!                                     
+
+Shout &#34;Bring on the rock!&#34;
+Else Whisper &#34;That ain&#39;t it, Chief&#34;                 
+
+</code></pre></td></tr></table>
+</div>
+</div><p>Obviamente para entenderlo en su totalidad habrá que leer la documentación anterior, pero no resultará en un problema significativo. A demás, en cualquiera de ambos casos habría que leer la documentación pues el interprete Rockstar a Python falla en una línea: <code>They are dazzled audiences</code> y para poder corregirla se necesita comprender el lenguaje Rockstar. Si no se corrige esa línea, obtendríamos una Solution incompleta.</p>
+<h3 id="solution-9">Solution</h3>
+<div class="box">
+picoCTF{BONJOVI}
+</div>
+
     </article>
     
     
@@ -1953,13 +2907,13 @@
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=Solving%20General%20Skills%20-%20picoCTF%202020&url=https%3a%2f%2fbabiloneos.github.io%2fen%2fposts%2fgeneral_skills_picoctf_2020%2f&hashtags=base64%2cgeneral%20skills&via=Guillermo%20Ballesteros" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Solving%20General%20Skills%20-%20picoCTF%202020&url=https%3a%2f%2fbabiloneos.github.io%2fen%2fposts%2fgeneral_skills_picoctf_2020%2f&hashtags=Bash%2cLinux%2cGeneral%20skills&via=Guillermo%20Ballesteros" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
     
       
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fbabiloneos.github.io%2fen%2fposts%2fgeneral_skills_picoctf_2020%2f&title=Solving%20General%20Skills%20-%20picoCTF%202020 &summary=Solution%20to%20General%20Skills%20category%27s%20challenges%20on%20picoCTF%202020&source=Blog%20profesional%20de%20Guillermo%20Ballesteros%2c%20alias%20babiloneos." target="_blank" rel="noreferer" title="LinkedIn" aria-label="LinkedIn Share Button" class="donation__item" data-type="share">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fbabiloneos.github.io%2fen%2fposts%2fgeneral_skills_picoctf_2020%2f&title=Solving%20General%20Skills%20-%20picoCTF%202020 &summary=picoCTF%202020%20General%20Skill%27s%20challenges%20writeups.&source=Blog%20profesional%20de%20Guillermo%20Ballesteros%2c%20alias%20babiloneos." target="_blank" rel="noreferer" title="LinkedIn" aria-label="LinkedIn Share Button" class="donation__item" data-type="share">
           <svg data-name="linkedin" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"/><path d="m.396 7.977h4.976v16.023h-4.976z"/><path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"/></svg>
         </a>
       
@@ -2446,7 +3400,113 @@ document.addEventListener('DOMContentLoaded', function () {
     
   </div>
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#2warm---50-points">2Warm - 50 points</a>
+      <ul>
+        <li><a href="#description">Description</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#solution">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#-translation-pending">::: Translation pending!!!</a></li>
+    <li><a href="#warmed-up---50-points">Warmed Up - 50 points</a>
+      <ul>
+        <li><a href="#description-1">Description</a></li>
+        <li><a href="#procedure-1">Procedure</a></li>
+        <li><a href="#solution-1">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lets-warm-up---50-points">Lets Warm Up - 50 points</a>
+      <ul>
+        <li><a href="#description-2">Description</a></li>
+        <li><a href="#procedure-2">Procedure</a></li>
+        <li><a href="#solution-2">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#strings-it---100-points">Strings it - 100 points</a>
+      <ul>
+        <li><a href="#description-3">Description</a></li>
+        <li><a href="#procedure-3">Procedure</a></li>
+        <li><a href="#solution-3">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#bases---100-points">Bases - 100 points</a>
+      <ul>
+        <li><a href="#description-4">Description</a></li>
+        <li><a href="#procedure-4">Procedure</a></li>
+        <li><a href="#solution-4">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#first-grep---100-points">First Grep - 100 points</a>
+      <ul>
+        <li><a href="#description-5">Description</a></li>
+      </ul>
+    </li>
+    <li><a href="#-translation-pending-1">&raquo;&raquo; Translation pending!!!</a>
+      <ul>
+        <li><a href="#procedure-5">Procedure</a></li>
+        <li><a href="#solution-5">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#whays-a-net-cat---100-points">whay&rsquo;s a net cat? - 100 points</a>
+      <ul>
+        <li><a href="#description-6">Description</a></li>
+        <li><a href="#procedure-6">Procedure</a></li>
+        <li><a href="#solution-6">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#plumbing---200-points">plumbing - 200 points</a>
+      <ul>
+        <li><a href="#description-7">Description</a></li>
+        <li><a href="#procedure-7">Procedure</a></li>
+        <li><a href="#solution-7">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#based---200-points">Based - 200 points</a>
+      <ul>
+        <li><a href="#description-8">Description</a></li>
+        <li><a href="#procedure-8">Procedure</a>
+          <ul>
+            <li><a href="#primer-paso">Primer paso</a></li>
+            <li><a href="#segundo-paso">Segundo paso</a></li>
+            <li><a href="#tercer-paso">Tercer paso</a></li>
+          </ul>
+        </li>
+        <li><a href="#solucion">Solucion</a></li>
+      </ul>
+    </li>
+    <li><a href="#flag_shop---300-points">flag_shop - 300 points</a>
+      <ul>
+        <li><a href="#description-9">Description</a>
+          <ul>
+            <li><a href="#pistas">Pistas</a></li>
+          </ul>
+        </li>
+        <li><a href="#procedure-9">Procedure</a></li>
+      </ul>
+    </li>
+    <li><a href="#mus1c---300-points">mus1c - 300 points</a>
+      <ul>
+        <li><a href="#description-10">Description</a>
+          <ul>
+            <li><a href="#pistas-1">Pistas</a></li>
+          </ul>
+        </li>
+        <li><a href="#procedure-10">Procedure</a></li>
+        <li><a href="#solution-8">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#1_wanna_b3_a_r0ck5tar---350-points">1_wanna_b3_a_r0ck5tar - 350 points</a>
+      <ul>
+        <li><a href="#description-11">Description</a></li>
+        <li><a href="#procedure-01">Procedure 01</a></li>
+        <li><a href="#procedure-02">Procedure 02</a></li>
+        <li><a href="#solution-9">Solution</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </section>
 

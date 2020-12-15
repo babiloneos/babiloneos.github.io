@@ -23,12 +23,12 @@
 
       
       <item>
-        <title>base64</title>
-        <link>https://babiloneos.github.io/en/tags/base64/</link>
+        <title>Bash</title>
+        <link>https://babiloneos.github.io/en/tags/bash/</link>
         <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
         <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
         
-        <guid>https://babiloneos.github.io/en/tags/base64/</guid>
+        <guid>https://babiloneos.github.io/en/tags/bash/</guid>
         <description></description>
         
         <dc:creator>Guillermo Ballesteros</dc:creator>
@@ -41,12 +41,30 @@
       </item>
       
       <item>
-        <title>general skills</title>
+        <title>General skills</title>
         <link>https://babiloneos.github.io/en/tags/general-skills/</link>
         <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
         <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
         
         <guid>https://babiloneos.github.io/en/tags/general-skills/</guid>
+        <description></description>
+        
+        <dc:creator>Guillermo Ballesteros</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Linux</title>
+        <link>https://babiloneos.github.io/en/tags/linux/</link>
+        <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+        <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
+        
+        <guid>https://babiloneos.github.io/en/tags/linux/</guid>
         <description></description>
         
         <dc:creator>Guillermo Ballesteros</dc:creator>
