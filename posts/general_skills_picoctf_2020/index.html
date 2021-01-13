@@ -1342,7 +1342,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Writeup de los retos en picoCTF 2020 de la categoría General Skills">
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1758,7 +1758,7 @@
 <div class="box">Can you convert the number 42 (base 10) to binary (base 2)?</div>
 <h3 id="procedimiento">Procedimiento</h3>
 <p>Este reto es el más sencillo, y lo digo sin miedo a equivocarme. Lo único que necesitamos es saber conversión de bases, o más fácil, tener una calculadora.<br />
-Para facilitar el trabajo usaré una calculadora en modo programador. Simplemente inntroducimos el valor decimal y nos retorna el mismo valor en binario.<br />
+Para facilitar el trabajo usaré una calculadora en modo programador. Simplemente introducimos el valor decimal y nos retorna el mismo valor en binario.<br />
 <figure >
   
   
@@ -1906,9 +1906,9 @@ Lo siguiente fue añadido el día 9 de Diciembre, 2020.</p>
 <div class="box">Can you find the flag in <em>file</em>? This would be really tedious to look through manually, something tells me there is a better way.</div>
 <h3 id="procedimiento-5">Procedimiento</h3>
 <p>Este reto es extremadamente similar a strings, pues el nombre ya nos dice que hacer y de nueva forma, se basa en usar <em>grep</em>. Sin embargo, esta vez no tenemos un archivo ejecutable, sino un archivo de texto por lo que, pese a ser útil el comando <em>strings</em>, lo ideal sería usar el comando <code>cat</code>.<br />
-El comando <code>cat</code> realmente funciona para concatenar el contenido de dos archivos y lo mostrará como output, sin embargo, si solo se le pasa como argumento un archivo, mostrará el contenido de ese archivo como output. Usando este output en grep nos terminaría dando el mismo resultado que se obtuvo en el reto antes mencionado.<br />
+El comando <code>cat</code> realmente funciona para concatenar el contenido de dos archivos y lo mostrará como output, sin embargo, si solo se le pasa como argumento un archivo, mostrará el contenido de ese archivo como output. Usando este output en grep nos terminaría dando el mismo resultado que se obtuvo en el reto anterior.<br />
 El comando final debería quedar algo así:</p>
-<pre><code>strings file | grep &quot;picoCTF&quot;
+<pre><code>cat file | grep &quot;picoCTF&quot;
 </code></pre><figure >
   
   
@@ -1928,7 +1928,7 @@ picoCTF{grep_is_good_to_find_things_dba08a45}
 <div class="box">Using netcat (nc) is going to be pretty important. Can you connect to <em>jupiter.challenges.picoctf.org</em> at port <em>64287</em> to get the flag?</div>
 <h3 id="procedimiento-6">Procedimiento</h3>
 <p>Esta vez todo está claro desde el nombre y la descripción: debemos usar netcat en la url y puerto indicados.<br />
-Netcat es una herramienta que permite asociar un script a un puerto específico de la IP publica propia. La forma de usarlo sería:</p>
+Netcat es una herramienta que permite asociar un script, colocado en el puerto de una computadora remota, a nuestra computadora. La forma de usarlo sería:</p>
 <pre><code>nc jupiter.challenges.picoctf.org 64287
 </code></pre><figure >
   
@@ -1948,7 +1948,7 @@ picoCTF{nEtCat_Mast3ry_284be8f7}
 <h3 id="descripción-7">Descripción</h3>
 <p>Sometimes you need to handle process data outside of a file. Can you find a way to keep the output from this program and search for the flag? Connect to <em>jupiter.challenges.picoctf.org 7480</em>.</p>
 <h3 id="procedimiento-7">Procedimiento</h3>
-<p>Por primera vez las cosas no parecen del todo claras, sin embargo recordando cómo usamos <code>grep</code> y <code>nc</code> podríamos guiarnos. La primer idea que se me viene a la mente es revisar la salida del netcar especificada:<br />
+<p>Por primera vez las cosas no parecen del todo claras, sin embargo recordando cómo usamos <code>grep</code> y <code>nc</code> podríamos guiarnos. La primer idea que se me viene a la mente es revisar la salida del netcat especificada:<br />
 <figure >
   
   
@@ -2553,7 +2553,7 @@ El resultado es el siguiente:</p>
         <span class="k">break</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Por desgracia esto también tiene errores en código, pero al ser un lenguaje más familiar para nosotros podemos corregirlo hasta que logremos hacerlo:</p>
+</div><p>Por desgracia esto también tiene errores en código, pero al ser un lenguaje más familiar para nosotros podemos corregirlo hasta que logremos ejecutarlo:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2615,11 +2615,10 @@ El resultado es el siguiente:</p>
 </code></pre></td></tr></table>
 </div>
 </div><p>Con un formato mucho más fácil de entender vemos que al ejecutar el código se nos pedira introducir un valor, al poner <code>10</code> nos pedirá otro número que debe ser <code>170</code> y entonces nos retornará una serie de números.<br />
-<div class="box"><p>cli: &gt; python3 output.py</p>
-<blockquote>
-<p>10<br />
+<div class="box">cli: $ python3 output.py<br />
+$ 10<br />
 Keep on rocking!<br />
-170<br />
+$ 170<br />
 66<br />
 79<br />
 78<br />
@@ -2627,9 +2626,7 @@ Keep on rocking!<br />
 79<br />
 86<br />
 73<br />
-Bring on the rock!</p>
-</blockquote>
-</div><br />
+Bring on the rock!</div><br />
 Si tomamos los valores <strong>NO introducidos por nosotros</strong> y los pasamos a ASCII obtendremos la solución del reto.</p>
 <h3 id="procedimiento-02">Procedimiento 02</h3>
 <p>Durante el desarrollo de la annterior solución, en el paso de hacer ejecutable el código Python, me encontré con otra solución que nos permite prescindir de Python y el interprete.<br />
@@ -4229,7 +4226,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2020, All Rights Reserved
+                    ©2021, All Rights Reserved
                 
             </p>
         

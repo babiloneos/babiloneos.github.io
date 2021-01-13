@@ -1342,7 +1342,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="picoCTF 2020 General Skill&#39;s challenges writeups.">
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1750,9 +1750,9 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>Year after year Carnegie Mellon University organize picoCTF, a CTF with challenges from the very basic to advanced, and at the end of the competition all is put to Internet so it can be solved by anyone.</p>
-<p>The most interesting thing of this CTF is the amount of challenge and the variety. It has exploitation Web, criptography, reverse engineering, forensic, binary exploitation and general skills. Those are, generally, all the challenge&rsquo;s category on any CTF.</p>
-<p>This year I decided to start my blog by solving some picoCTF&rsquo;s challenges while i&rsquo;m studying for bigger challenges, so with this post I begin my blog and my picoCTF 2020 challenge.</p>
+      <p>Year after year Carnegie Mellon University organize picoCTF, a CTF with challenges from the very basic to advanced, and at the end of the competition all is put to Internet so it can be solved by anyone.<br />
+The most interesting thing of this CTF is the amount of challenge and the variety. It has exploitation Web, criptography, reverse engineering, forensic, binary exploitation and general skills. Those are, generally, all the challenge&rsquo;s category on any CTF.<br />
+This year I decided to start my blog by solving some picoCTF&rsquo;s challenges while i&rsquo;m studying for bigger challenges, so with this post I begin my blog and my picoCTF 2020 challenge.</p>
 <h2 id="2warm---50-points">2Warm - 50 points</h2>
 <h3 id="description">Description</h3>
 <div class="box">Can you convert the number 42 (base 10) to binary (base 2)?</div>
@@ -1899,12 +1899,10 @@ picoCTF{l3arn_th3_r0p35}
 <h2 id="first-grep---100-points">First Grep - 100 points</h2>
 <h3 id="description-5">Description</h3>
 <div class="box">Can you find the flag in <em>file</em>? This would be really tedious to look through manually, something tells me there is a better way.</div>
-<h2 id="-translation-pending-1">&raquo;&raquo; Translation pending!!!</h2>
 <h3 id="procedure-5">Procedure</h3>
-<p>Este reto es extremadamente similar a strings, pues el nombre ya nos dice que hacer y de nueva forma, se basa en usar <em>grep</em>. Sin embargo, esta vez no tenemos un archivo ejecutable, sino un archivo de texto por lo que, pese a ser útil el comando <em>strings</em>, lo ideal sería usar el comando <code>cat</code>.<br />
-El comando <code>cat</code> realmente funciona para concatenar el contenido de dos archivos y lo mostrará como output, sin embargo, si solo se le pasa como argumento un archivo, mostrará el contenido de ese archivo como output. Usando este output en grep nos terminaría dando el mismo resultado que se obtuvo en el reto antes mencionado.<br />
-El comando final debería quedar algo así:</p>
-<pre><code>strings file | grep &quot;picoCTF&quot;
+<p>This challenge is like <a href="#strings-it---100-points"><em>strings</em></a>, and even the name tells us what to do, again using <em>grep</em>. However this time it&rsquo;s not an executable file, but a text file so depiste the <em>strings</em> command being useful, it would be ideal to use the <code>cat</code> command.<br />
+The real purpose of <code>cat</code> command is to concatenate two files content, and show the result as the output, however, if you get only one file as argument it will shows the file content as output. Using that output with <code>grep</code> we&rsquo;ll get a result like the <a href="#strings-it---100-points"><em>strings</em></a> one. The final command should be like this:</p>
+<pre><code>cat file | grep &quot;picoCTF&quot;
 </code></pre><figure >
   
   
@@ -1923,8 +1921,8 @@ picoCTF{grep_is_good_to_find_things_dba08a45}
 <h3 id="description-6">Description</h3>
 <div class="box">Using netcat (nc) is going to be pretty important. Can you connect to <em>jupiter.challenges.picoctf.org</em> at port <em>64287</em> to get the flag?</div>
 <h3 id="procedure-6">Procedure</h3>
-<p>Esta vez todo está claro desde el nombre y la Description: debemos usar netcat en la url y puerto indicados.<br />
-Netcat es una herramienta que permite asociar un script a un puerto específico de la IP publica propia. La forma de usarlo sería:</p>
+<p>This time all is cleare since the name and the description: we have tod use <code>netcat</code> with the given url and port.<br />
+Netcat is a tool that allows us to associate a script, placed on the port of a remote computer, with our computer. The way we should use it is:</p>
 <pre><code>nc jupiter.challenges.picoctf.org 64287
 </code></pre><figure >
   
@@ -1944,7 +1942,7 @@ picoCTF{nEtCat_Mast3ry_284be8f7}
 <h3 id="description-7">Description</h3>
 <p>Sometimes you need to handle process data outside of a file. Can you find a way to keep the output from this program and search for the flag? Connect to <em>jupiter.challenges.picoctf.org 7480</em>.</p>
 <h3 id="procedure-7">Procedure</h3>
-<p>Por primera vez las cosas no parecen del todo claras, sin embargo recordando cómo usamos <code>grep</code> y <code>nc</code> podríamos guiarnos. La primer idea que se me viene a la mente es revisar la salida del netcar especificada:<br />
+<p>For the first we can&rsquo;t know what to do by the name or description. However we remember the use of <code>grep</code> and <code>nc</code>. My first idea was to check the netcat output:<br />
 <figure >
   
   
@@ -1955,7 +1953,7 @@ picoCTF{nEtCat_Mast3ry_284be8f7}
   
   
 </figure><br />
-La salida es larga y repetitiva. Siguiendo con mi idea, habría que mandar esta salida al <code>grep</code> para que nos muestre directamente la linea que tenga <em>picoCTF</em> en ella:</p>
+The output is long and repites himself. Following my idea we should send this output to <code>grep</code> so we can find a line starting with <em>picoCTF</em>:</p>
 <pre><code>nc jupiter.challenges.picoctf.org 7480 | grep &quot;picoCTF&quot;
 </code></pre><p><figure >
   
@@ -1967,7 +1965,7 @@ La salida es larga y repetitiva. Siguiendo con mi idea, habría que mandar esta 
   
   
 </figure><br />
-Funcionó. Como se observa, toda salida en la terminal se puede enviar a grep para buscar información específica.</p>
+And it works. As we can see, we&rsquo;re able to sent any output to <code>grep</code>.</p>
 <h3 id="solution-7">Solution</h3>
 <div class="box">
 picoCTF{digital_plumb3r_06e9d954}
@@ -1976,7 +1974,7 @@ picoCTF{digital_plumb3r_06e9d954}
 <h3 id="description-8">Description</h3>
 <div class="box">To get truly 1337, you must understand different data encodings, such as hexadecimal or binary. Can you get the flag from this program to prove you are on the way to becoming 1337? Connect with <em>nc jupiter.challenges.picoctf.org 29221</em>.</div>
 <h3 id="procedure-8">Procedure</h3>
-<p>Para hacernos una idea de a qué nos enfrentamos, haré el netcat para ver qué me muestra:<br />
+<p>To know what are we confrontint to I&rsquo;ll use netcat to see what it shows:<br />
 <figure >
   
   
@@ -1987,9 +1985,9 @@ picoCTF{digital_plumb3r_06e9d954}
   
   
 </figure><br />
-Pues bien, tenemos un reto contrareloj y que al menos en la primer parte nos pide conversión de valores. Se me ocurren dos soluciones: hacer uno por uno de forma manual, o hacer un script de python, o bash, para que lo resuelva por nosotros. Yo me iré por la opción más rápida que es resolverlo de forma manual. Y para hacerlo aún más rápido usaré herramientas online.</p>
-<h4 id="primer-paso">Primer paso</h4>
-<p>Para el valor binario usaré este <a href="https://codebeautify.org/binary-string-converter">convertidor de Binario a String</a>:<br />
+So this is a time challenge, and at least the first part ask us for a value conversion. I had two ideas: do one by one manually, or write a script on python or bash that solves it for us. I chose the first one to do it quicker, and to do it I&rsquo;ll use online tools.</p>
+<h4 id="first-step">First Step</h4>
+<p>For the binary balue I&rsquo;ll use this <a href="https://codebeautify.org/binary-string-converter">Binary to String page</a>:<br />
 <figure >
   
   
@@ -2000,14 +1998,14 @@ Pues bien, tenemos un reto contrareloj y que al menos en la primer parte nos pid
   
   
 </figure><br />
-¡Bien! tenemos la primer palabra: <code>street</code>. Al introducirla en la terminal obtenemos la siguiente respuesta:<br />
+Good! We have the first word <code>street</code>. When we send it we get this answere:<br />
 <div class="box">
 Please give me the  163 154 165 144 147 145 as a word.
 Input:
 </div></p>
-<h4 id="segundo-paso">Segundo paso</h4>
-<p>Parece que la siguiente palabra tiene valores entre 140 y 170, lo cual me hace pensar que son valores decimales de ASCII, pero al revisar la tabla (que encontrarás en <a href="#lets-warm-up---50-points">Lets Warm Up</a>), notamos que ASCII solo llega hasta el 127 así que descartamos la idea.<br />
-Podríamos pensar que es otro tipo de codificación para caracteres, pero la verdad es que todas se basan en ASCII por lo que valores más allá de 127 no serán caracteres del alfabeto inglés. Mirando un poco más de cerca los valores a decodificar notamos que no hay ningún 8 o 9, así que se podría tratar de un valor octal, donde el 141 es equivalente a 97 decimal, o <em>a</em> en ASCII. Suena muy bien la idea, así que usaremos <a href="https://cryptii.com/pipes/decimal-text">esta página</a> que convierte de Octal a ASCII.<br />
+<h4 id="second-step">Second Step</h4>
+<p>This word have values between 140 and 170, so I think it could be decimal values from some ASCII characters, but checking the ASCII table (you can find it in <a href="#lets-warm-up---50-points">Lets Warm Up</a>) we notice there is only values under 127, so this isn&rsquo;t the way.<br />
+It could be other character codification, but all those codifications are based on ASCII, so values over 127 will not be characters from the English alphabet. Looking again I noticed there is no number bigger than 7, so they could be some octal values where octal 141 is decimal 97, or an <em>a</em> in ASCII. It sounds right so we&rsquo;ll use <a href="https://cryptii.com/pipes/decimal-text">this web page</a> that converts from octal to ASCII.<br />
 <figure >
   
   
@@ -2018,14 +2016,14 @@ Podríamos pensar que es otro tipo de codificación para caracteres, pero la ver
   
   
 </figure><br />
-Al introducir la palabra obtenida en la terminal obtenemos:<br />
+When we send the word we haver this answer:<br />
 <div class="box">
 Please give me the 736f636b6574 as a word.
 Input:
 </div></p>
-<h4 id="tercer-paso">Tercer paso</h4>
-<p>Observamos valores númericos normales, pero también letras, y también notamos que tenemos una cantidad par de caracteres, específicamente 12. Todo esto me hace pensar en Hexadecimal, que tendría sentido siguiendo el patrón establecido por los dos pasos anteriores.<br />
-Usando la misma herramienta que con el paso anterior, pero el valor introducido lo dividiremos en pares.<br />
+<h4 id="third-step">Third Step</h4>
+<p>So now there are numbers and letters in the word. The letters looks like the first one of the alphabet, and also there are an even number of characters in the word. All of this makes me think in Hexadecimal, which would have sense if we follow the pattern of the last steps.<br />
+Using the same tool than the last step we get:<br />
 <figure >
   
   
@@ -2036,8 +2034,8 @@ Usando la misma herramienta que con el paso anterior, pero el valor introducido 
   
   
 </figure><br />
-¡Genial! lo introducimos en la terminal y obtenemos:</p>
-<h3 id="solucion">Solucion</h3>
+Cool! we send it and get:</p>
+<h3 id="solution-8">Solution</h3>
 <div class="box">
 You've beaten the challenge
 Flag: picoCTF{learning_about_converting_values_00a975ff}
@@ -2058,7 +2056,7 @@ Flag: picoCTF{learning_about_converting_values_00a975ff}
   </div>
 </div>
 <h3 id="procedure-9">Procedure</h3>
-<p>Nos proporcionan un código fuente en C que nos explica un poco de qué trata el reto:</p>
+<p>We get a C script who explains what is about the challenge:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2243,7 +2241,7 @@ Flag: picoCTF{learning_about_converting_values_00a975ff}
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Solution pendiente :) pero desde ya se ve que trata de explotación binaria por buffer overflow.</p>
+</div><p>Pending solution :) but it is a binary exploitation based in Buffer Overflow.</p>
 <h2 id="mus1c---300-points">mus1c - 300 points</h2>
 <h3 id="description-10">Description</h3>
 <div class="box">I wrote you a <em>song</em>. Put it in the picoCTF{} flag format.</div>
@@ -2260,7 +2258,7 @@ Flag: picoCTF{learning_about_converting_values_00a975ff}
   </div>
 </div>
 <h3 id="procedure-10">Procedure</h3>
-<p>La <em>canción</em> que se menciona en la Description es esta:</p>
+<p>The song the descriptions talks about is this one:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2377,8 +2375,7 @@ shout it
 shout Pico
 </code></pre></td></tr></table>
 </div>
-</div><p>Como podrán observar, es muy confuso lo que se debería hacer y es aquí donde entra uno de los consejos que da <a href="https://www.youtube.com/user/RootOfTheNull">John Hammond</a>, un famoso youtuber que desde hace años resuelve CTFs, sobre usar google como aliado. Si analizamos un poco más cuidadosamente el archivo nos daremos cuenta que tiene una estructura peculiar, obvio simula estrofas, pero también pareciera un código de programación.<br />
-Podríamos guiarnos de ello y buscar en google algún lenguaje que use shout, build, y put, pero en vez de eso podríamos apoyarnos en las Pistas (o hints) que mencionan <code>master rockstar</code>. Busquemos eso en google:<br />
+</div><p>As you can see is very confusing what we should do here, so i&rsquo;ll use the <a href="https://www.youtube.com/user/RootOfTheNull">John Hammond</a> tips. He is a famous youtuber who solves a lot of CTFs and he sais that we have to use google as our ally. If we chek it carfully we should see that the song has a structure similar to a programming code, so we could search some language that use words like <em>shout, biuld</em> and <em>put</em>, but it doesn&rsquo;t sound very convenient. However, we could use the hints, specifically the <code>master rockstar</code> part. Let&rsquo;s search on Google:<br />
 <figure >
   
   
@@ -2389,12 +2386,12 @@ Podríamos guiarnos de ello y buscar en google algún lenguaje que use shout, bu
   
   
 </figure><br />
-¡Ahí está! Encontramos el repositorio en GitHub de un Lenguaje de Programación llamado <a href="https://github.com/RockstarLang/rockstar"><strong>Rockstar</strong></a>. No hay muchas pruebas de que se trate de lo que buscamos, pero mirando las especificaciones nos encontramos con ejemplos como:</p>
+And there it is, we found a Github repository about a programming language called <a href="https://github.com/RockstarLang/rockstar"><strong>Rockstar</strong></a>. If we look it we&rsquo;ll find some examples as:</p>
 <pre><code class="language-arrays_Rockstar" data-lang="arrays_Rockstar">Let my string be &quot;abcdefg&quot;
 Shout my string at 0 (will print &quot;a&quot;)
 Shout my string at 1 (will print &quot;b&quot;)
 Let the character be my string at 2
-</code></pre><p>Que nos dicen que en efecto esto es lo que buscamos. Mirando un poco más el repositorio nos encontramos con el compilador <a href="https://github.com/gaborsch/rocky">Rocky</a> que está basado en Java, así que lo descargamos, compilamos el <em>.txt</em> que tenemos y el resultado es:<br />
+</code></pre><p>So this is what we are looking for. Searching in the repository we found a compiler called <a href="https://github.com/gaborsch/rocky">Rocky</a> which is based on Java, so we downloading it and compile the <em>.txt</em>:<br />
 <div class="box"><code>&gt; ./rocky.jar programs/lyrics.txt</code><br />
 114<br />
 114<br />
@@ -2410,17 +2407,16 @@ Let the character be my string at 2
 49<br />
 51<br />
 114</div><br />
-¡Excelente! Si recordamos lo visto en <a href="#based---200-points">Based</a> y en <a href="#lets-warm-up---50-points">Let&rsquo;s Warm Up</a> notaremos que estos números son valores de ASCII, por lo que ya sea usando una herramienta online, o de forma manual, llegaremos a el siguiente valor con esos números: <code>rrrocknrn0113r</code></p>
-<h3 id="solution-8">Solution</h3>
-<p><div class="box">
+Nice! If we remember what we watched in <a href="#based---200-points">Based</a> and in <a href="#lets-warm-up---50-points">Let&rsquo;s Warm Up</a> we&rsquo;ll note this numbers are ASCII values, so we use an online tool to get the string <code>rrrocknrn0113r</code>.</p>
+<h3 id="solution-9">Solution</h3>
+<div class="box">
 picoCTF{rrrocknrn0113r}
-</div><br />
-Lo siguiente fue añadido el 15 de Diciembre del 2020</p>
+</div>
 <h2 id="1_wanna_b3_a_r0ck5tar---350-points">1_wanna_b3_a_r0ck5tar - 350 points</h2>
 <h3 id="description-11">Description</h3>
 <div class="box">I wrote you another song. Put the flag in the picoCTF{} flag format</div>
 <h3 id="procedure-01">Procedure 01</h3>
-<p>De nueva cuenta nos encontramos con un archivo que asemeja a una canción:</p>
+<p>Again, we have a song file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2483,10 +2479,10 @@ Else Whisper &#34;That ain&#39;t it, Chief&#34;
 Break it down 
 </code></pre></td></tr></table>
 </div>
-</div><p>Análizando más a detalle el texto nos encontramos con estructuras como <em>if</em>, también volvemos a ver los <em>shout</em> por lo que sin duda se trata del mismo lenguaje de programación que el anterior reto.<br />
-Por desgracia, al intentar ejecutar el archivo con el compilador anteriormente usado nos encontramos con un error de  código que no nos permite avanzar, este error dice específicamente: <code>Error: BreakStatement cannot be applied to the block at line 25</code>. Así que tendrémos que buscar otra forma.<br />
-Releyendo el repositorio en Github de Rockstar nos encontramos con <a href="https://github.com/RockstarLang/rockstar#implementations">interpretes de este lenguaje a otros de uso común</a>, como JavaScript, Java, Pyton, etc. Por lo que probaremos interpretando el texto a código en Python para ánalizar lo que hace el programa y tal vez poder ejecutarlo sin errores.<br />
-El resultado es el siguiente:</p>
+</div><p>Analyzing  closelly the text we found structures like <em>if</em>, and again <em>shout</em> so this is the same programming language than the last challenge.<br />
+Unfortunatelly, when we try to compile the file we get a code error: <code>Error: BreakStatement cannot be applied to the block at line 25</code>, so we&rsquo;ll have to search another way.<br />
+Reading the repository of Rockstar we found some <a href="https://github.com/RockstarLang/rockstar#implementations">interpreters of this language to others commonly used</a> like Javascript, Java, Python, etc. We&rsquo;ll try using this to translate to Python so we can analize the code and maybe execute it without errors.<br />
+This compiler returns this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2549,7 +2545,7 @@ El resultado es el siguiente:</p>
         <span class="k">break</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Por desgracia esto también tiene errores en código, pero al ser un lenguaje más familiar para nosotros podemos corregirlo hasta que logremos hacerlo:</p>
+</div><p>This code has errors too. But, as Python is a well known language, we can fix it until we get something like this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2581,7 +2577,7 @@ El resultado es el siguiente:</p>
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-output_ejecutable.py" data-lang="output_ejecutable.py"><span class="n">Rocknroll</span> <span class="o">=</span> <span class="bp">True</span>
+<pre class="chroma"><code class="language-output_executable.py" data-lang="output_executable.py"><span class="n">Rocknroll</span> <span class="o">=</span> <span class="bp">True</span>
 <span class="n">Silence</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="n">a_guitar</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">44</span>
@@ -2600,22 +2596,21 @@ El resultado es el siguiente:</p>
         <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">74</span>
         <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="p">)</span>
         <span class="n">They</span> <span class="o">=</span> <span class="mi">79</span>       <span class="c1">#They are dazzled audiences</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">They</span><span class="p">)</span>     <span class="c1">#Decía it, pero se refería a Rock.</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">They</span><span class="p">)</span>     <span class="c1">#Changed from &#39;it&#39;, it meant &#39;They&#39;.</span>
         <span class="n">Rock</span> <span class="o">=</span> <span class="mi">86</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">Rock</span><span class="p">)</span>     <span class="c1">#Decía it, pero se refería a Rock.</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Rock</span><span class="p">)</span>     <span class="c1">#Changed from &#39;it&#39;, it meant &#39;Rock&#39;.</span>
         <span class="n">Tommy</span> <span class="o">=</span> <span class="mi">73</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="p">)</span>    <span class="c1">#Decía it pero se refería a Tommy</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Tommy</span><span class="p">)</span>    <span class="c1">#Changed from &#39;it&#39;, it meant &#39;Tommy&#39;.</span>
         <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Bring on the rock!&#34;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s2">&#34;That ain&#39;t it, Chief&#34;</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Con un formato mucho más fácil de entender vemos que al ejecutar el código se nos pedira introducir un valor, al poner <code>10</code> nos pedirá otro número que debe ser <code>170</code> y entonces nos retornará una serie de números.<br />
-<div class="box"><p>cli: &gt; python3 output.py</p>
-<blockquote>
-<p>10<br />
+</div><p>With this easier format we can understand what happens when we execute the code. It will ask us to input <code>10</code>, then <code>170</code> and only then we&rsquo;ll receive this numbers serie:<br />
+<div class="box">cli: $ python3 output.py<br />
+$ 10<br />
 Keep on rocking!<br />
-170<br />
+$ 170<br />
 66<br />
 79<br />
 78<br />
@@ -2623,17 +2618,15 @@ Keep on rocking!<br />
 79<br />
 86<br />
 73<br />
-Bring on the rock!</p>
-</blockquote>
-</div><br />
-Si tomamos los valores <strong>NO introducidos por nosotros</strong> y los pasamos a ASCII obtendremos la Solution del reto.</p>
+Bring on the rock!</div><br />
+If we use this last values returned in the execution and translate them to ASCII values we get the solution.</p>
 <h3 id="procedure-02">Procedure 02</h3>
-<p>Durante el desarrollo de la annterior Solution, en el paso de hacer ejecutable el código Python, me encontré con otra Solution que nos permite prescindir de Python y el interprete.<br />
-En <a href="https://codewithrockstar.com/docs">esta página</a> podemos encontrar la documentación de Rockstar en un formato más amigable. Lo que nos interesaría es la sección de <strong>Poetic Number Literals</strong> y <strong>Loops</strong>. Después de darles una lectura rápda podemos comprender la falla al ejecutar el código Rockstar original:</p>
+<p>As I solved the challenge with the previous process I came across another method that leads us to the solution. This new solution allow us to avoid Python and go on just with the <em>.txt</em> gived as in the last challenge.<br />
+In <a href="https://codewithrockstar.com/docs">this page</a> we can find the Rockstar&rsquo;s documentation in a very friendly format. What we are looking for are the sections called <strong>Poetic Number Literals</strong> and <strong>Loops</strong>. After a brief read we can undersand the error in the Rockstar code:</p>
 <ul>
-<li><code>Break it down</code> no sirve para cerrar bloques if, debe ser un salto de línea en véz de eso.</li>
-<li>Existen definiciones de números que se reemplazan con texto aleatorio, del cual, para saber su valor, hay que contar las letras del texto de forma que cada palabla es 10 veces mayor a la palabra siguiente. Ej: abrir puerta, donde abrir vale 50 (5 letras) y puerta vale 6 (6 letras y multiplica por 10 a la palabra anterior), resultando en un valor de 56.<br />
-Con esto en cuenta y conocimiento fundamental de programación podemos leer, corregir y útilizar el código en lenguaje Rockstar.</li>
+<li><code>Break it down</code> doesn&rsquo;t works to close &lsquo;if&rsquo; blocks, it has to be a line break.</li>
+<li>There are number definitions that are replaced with random text, where the compile counts the letters of every word and the amount of letters is the number defined and every word position defines how much times the number is multiplied by 10. For example, <code>open the door</code>, where <code>open</code> value is 400 because it has 4 letters and is the first of three words getting then the hundreds position, <code>the</code> value is 30 as it has 3 letters ans has the decimals position and <code>door</code> value is 4 as it has 4 letters ans has the units position. So <code>open the door</code> is equal to 434 for the Rockstar compiler.<br />
+Now we can fix the <em>.txt.</em> so it can be compile without errors.</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2697,8 +2690,9 @@ Else Whisper &#34;That ain&#39;t it, Chief&#34;
 
 </code></pre></td></tr></table>
 </div>
-</div><p>Obviamente para entenderlo en su totalidad habrá que leer la documentación anterior, pero no resultará en un problema significativo. A demás, en cualquiera de ambos casos habría que leer la documentación pues el interprete Rockstar a Python falla en una línea: <code>They are dazzled audiences</code> y para poder corregirla se necesita comprender el lenguaje Rockstar. Si no se corrige esa línea, obtendríamos una Solution incompleta.</p>
-<h3 id="solution-9">Solution</h3>
+</div><p>This code is now completely executable and to get the solution we just have to follow the execution done with python.<br />
+Obviously to completly understand the code we have to read all the documentation, but it is an insignificant problem. Also, in both solutions we have to read that documentation because the Python interpreter fails in the line <code>They are dazzled audiences</code>  and to be able to fix it we need to understand the Rockstar Language. If this line isn&rsquo;t fixed we would get an incomplete solution.</p>
+<h3 id="solution-10">Solution</h3>
 <div class="box">
 picoCTF{BONJOVI}
 </div>
@@ -3441,10 +3435,6 @@ document.addEventListener('DOMContentLoaded', function () {
     <li><a href="#first-grep---100-points">First Grep - 100 points</a>
       <ul>
         <li><a href="#description-5">Description</a></li>
-      </ul>
-    </li>
-    <li><a href="#-translation-pending-1">&raquo;&raquo; Translation pending!!!</a>
-      <ul>
         <li><a href="#procedure-5">Procedure</a></li>
         <li><a href="#solution-5">Solution</a></li>
       </ul>
@@ -3468,12 +3458,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#description-8">Description</a></li>
         <li><a href="#procedure-8">Procedure</a>
           <ul>
-            <li><a href="#primer-paso">Primer paso</a></li>
-            <li><a href="#segundo-paso">Segundo paso</a></li>
-            <li><a href="#tercer-paso">Tercer paso</a></li>
+            <li><a href="#first-step">First Step</a></li>
+            <li><a href="#second-step">Second Step</a></li>
+            <li><a href="#third-step">Third Step</a></li>
           </ul>
         </li>
-        <li><a href="#solucion">Solucion</a></li>
+        <li><a href="#solution-8">Solution</a></li>
       </ul>
     </li>
     <li><a href="#flag_shop---300-points">flag_shop - 300 points</a>
@@ -3494,7 +3484,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </ul>
         </li>
         <li><a href="#procedure-10">Procedure</a></li>
-        <li><a href="#solution-8">Solution</a></li>
+        <li><a href="#solution-9">Solution</a></li>
       </ul>
     </li>
     <li><a href="#1_wanna_b3_a_r0ck5tar---350-points">1_wanna_b3_a_r0ck5tar - 350 points</a>
@@ -3502,7 +3492,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#description-11">Description</a></li>
         <li><a href="#procedure-01">Procedure 01</a></li>
         <li><a href="#procedure-02">Procedure 02</a></li>
-        <li><a href="#solution-9">Solution</a></li>
+        <li><a href="#solution-10">Solution</a></li>
       </ul>
     </li>
   </ul>
@@ -4230,7 +4220,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2020, All Rights Reserved
+                    ©2021, All Rights Reserved
                 
             </p>
         
