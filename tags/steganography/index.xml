@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Steganography on Babiloneos</title>
+    <link>https://babiloneos.github.io/tags/steganography/</link>
+    <description>Recent content in Steganography on Babiloneos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <managingEditor>babiloneos@gmail.com (Guillermo Ballesteros)</managingEditor>
+    <webMaster>babiloneos@gmail.com (Guillermo Ballesteros)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://babiloneos.github.io/tags/steganography/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Atletas - Mi reto para un CTF</title>
+        <link>https://babiloneos.github.io/posts/atletas-mi-reto-para-ctf/</link>
+        <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+        <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
+        <atom:modified>Sun, 17 Jan 2021 00:00:00 +0000</atom:modified>
+        <guid>https://babiloneos.github.io/posts/atletas-mi-reto-para-ctf/</guid>
+        <description>Durante el 2020 tuve la fortuna de realizar una movilidad internacional a la Universidad Nacional de La Plata en Argentina. Por desgracia coincidió con el inicio de la pandemia por el COVID-19, sin embargo eso no impidio el desarrollo de proyectos interesantes, ni la posibilidad de aprender y de vivir nuevas experiencias.
+Una de las materias que tomé durante esta movilidad fue Desarrollo Seguro de Aplicaciones de la mano del profesor Einar Lafranco, una materia que fue desde el software libre, hasta Vulnerabilidades Zero Day, pero que se enfocó sobre todo en el Top Ten de OWASP para vulnerabilidades en aplicaciones web.</description>
+        
+        <dc:creator>Guillermo Ballesteros</dc:creator>
+        <media:content url="https://babiloneos.github.ioimages/Atletas/Atletas01.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        <media:content url="https://babiloneos.github.ioimages/Atletas/Atletas01.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>Python</category>
+            
+          
+            
+              <category>Docker</category>
+            
+          
+            
+              <category>Steganography</category>
+            
+          
+        
+        
+          
+            
+              <category>CTF</category>
+            
+          
+            
+              <category>Web Explotaition</category>
+            
+          
+        
+        
+          
+            
+              <category>Development</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

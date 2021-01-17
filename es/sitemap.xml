@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://babiloneos.github.io/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,23 +18,13 @@
   </url>
   
   <url>
-    <loc>https://babiloneos.github.io/tags/bash/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/tags/bash/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/tags/bash/"
-                />
+    <loc>https://babiloneos.github.io/posts/atletas-mi-reto-para-ctf/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://babiloneos.github.io/categories/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -49,7 +39,7 @@
   
   <url>
     <loc>https://babiloneos.github.io/categories/ctf/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -59,6 +49,91 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://babiloneos.github.io/categories/ctf/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/series/development/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/tags/docker/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/posts/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/tags/python/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/series/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/tags/steganography/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/tags/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/categories/web-explotaition/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babiloneos.github.io/tags/bash/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/tags/bash/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/tags/bash/"
                 />
   </url>
   
@@ -123,21 +198,6 @@
   </url>
   
   <url>
-    <loc>https://babiloneos.github.io/posts/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/posts/"
-                />
-  </url>
-  
-  <url>
     <loc>https://babiloneos.github.io/posts/general_skills_picoctf_2020/</loc>
     <lastmod>2020-12-07T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -149,36 +209,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://babiloneos.github.io/posts/general_skills_picoctf_2020/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://babiloneos.github.io/series/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/series/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://babiloneos.github.io/tags/</loc>
-    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babiloneos.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://babiloneos.github.io/tags/"
                 />
   </url>
   
