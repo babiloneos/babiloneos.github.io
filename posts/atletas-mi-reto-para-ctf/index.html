@@ -1761,7 +1761,7 @@
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <p>Durante el 2020 tuve la fortuna de realizar una movilidad internacional a la <em>Universidad Nacional de La Plata</em> en Argentina. Por desgracia coincidió con el inicio de la pandemia por el COVID-19, sin embargo eso no impidio el desarrollo de proyectos interesantes, ni la posibilidad de aprender y de vivir nuevas experiencias.</p>
-<p>Una de las materias que tomé durante esta movilidad fue <strong>Desarrollo Seguro de Aplicaciones</strong> de la mano del profesor Einar Lafranco, una materia que fue desde el software libre, hasta Vulnerabilidades Zero Day, pero que se enfocó sobre todo en el <em>Top Ten de OWASP</em> para vulnerabilidades en aplicaciones web.</p>
+<p>Una de las materias que tomé durante esta movilidad fue <strong>Desarrollo Seguro de Aplicaciones</strong> de la mano del profesor Einar Lafranco, una materia que cubrió desde el software libre, hasta Vulnerabilidades Zero Day, pero que se enfocó sobre todo en el <em>Top Ten de OWASP</em> para vulnerabilidades en aplicaciones web.</p>
 <p>Como debería ser en una materia de Ingeniería, y a la vez en una materia de Informática, no bastó con un cursó teorico. ¡Teniamos que ver estas vulnerabilidades en acción! Por lo que parte fundamental del curso fue un CTF con retos desde lo más sencillo como lo es ocultamiento y criptografía básica, hasta aplicaciones de lo más complejas que nadie logró resolver. Y como cereza en el pastel, de proyecto final se nos pidió desarrollar un reto para el CTF, y es de eso de lo que va este articulo.</p>
 <h2 id="atletas">Atletas</h2>
 <p>Como se puede leer en el <a href="https://github.com/babiloneos/Atletas">repositorio de Github</a> de la aplicación, este cuenta con una versión <a href="https://github.com/babiloneos/Atletas/tree/master">vulnerable</a> y otra <a href="https://github.com/babiloneos/Atletas/tree/Seguro">segura</a>. Es decir, una versión útil para el CTF, y otra versión donde arreglamos vulnerabilidades cumpliendo el objetivo de la materia.<br />
@@ -1779,7 +1779,8 @@ Para el desarrollo de la aplicación no nos quisimos complicar la vida, sin emba
   
   
 </figure><br />
-Para el Login fue relativamente sencillo. Por la parte de HTML solo se necesitó un <em>form</em> sencillo con usuario, password, y botón. En cuanto a el POST requests tampoco se hizo nada del otro mundo, a excepción de no poner limite de intentos para iniciar sesión. Donde tuvimos que enfocarnos fue en la base de datos para los usuarios. En primer lugar elegimos usar sqlite debido a lo sencillo que es usarlo en Python, a demás en su implementación con Flask tiene un bloqueo de tablas de forma que si haces una inyección sql en la tabla de &ldquo;productos&rdquo; (por ejemplo), solo podrás ver esa tabla y no te dejará acceder a ningun otra tabla. Esto nos serviría para que pudieran hacer una inyección sql dentro del sistema pero que no pudieran acceder a los usuarios y contraseñas. Pero igual, y por si las dudas, pusimos las contraseñas en SHA256.</p>
+Para el Login fue relativamente sencillo. Por la parte de HTML solo se necesitó un <em>form</em> sencillo con usuario, password, y botón. En cuanto a el POST requests tampoco se hizo nada del otro mundo, a excepción de no poner limite de intentos para iniciar sesión.<br />
+Donde tuvimos que enfocarnos fue en la base de datos para los usuarios. En primer lugar elegimos usar sqlite debido a lo sencillo que es usarlo en Python, a demás en su implementación con Flask tiene un bloqueo de tablas de forma que si haces una inyección sql en la tabla de &ldquo;productos&rdquo; (por ejemplo), solo podrás ver esa tabla y no te dejará acceder a ningun otra tabla. Esto nos serviría para que pudieran hacer una inyección sql dentro del sistema pero que no pudieran acceder a los usuarios y contraseñas. Pero igual, y por si las dudas, pusimos las contraseñas en SHA256.</p>
 <figure >
   
   
@@ -1790,7 +1791,7 @@ Para el Login fue relativamente sencillo. Por la parte de HTML solo se necesitó
   
   
 </figure>
-<p>Y por último, los usuarios y contraseñas. Para los usuario se recurrió a los dos nombres de usuario más populares según <a href="https://github.com/danielmiessler/SecLists/blob/master/Usernames/top-usernames-shortlist.txt">este archivo</a> del famoso repositorio de Github <strong>SecLists</strong>, los cuales son <em>admin</em> y <em>root</em>. Y para las contraseñas usamos <a href="https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases">la lista RockYou</a> del mismo repositorio, pero en este caso usamos un criterio más ridiculo para la selección: la contraseña número 69 para <em>root</em> y la número 69420 para <em>admin</em>. Ahora, no solo fue por los números, también por el tiempo que tomaría llegar a las contraseñas, pues no creimos que nuestros compañeros llegaran a intentar el usuario root, pero si lo hacían entrarían rápido an sistema. Sin embargo, estabamos seguros de que intentarían usar el usuario Admin, por lo que hicimos que si era así, les costara mucho tiempo llegar a la respuesta.</p>
+<p>Y por último, los usuarios y contraseñas. Para los usuario se recurrió a los dos nombres de usuario más populares según <a href="https://github.com/danielmiessler/SecLists/blob/master/Usernames/top-usernames-shortlist.txt">este archivo</a> del famoso repositorio de Github <strong>SecLists</strong>, los cuales son <em>admin</em> y <em>root</em>. Y para las contraseñas usamos <a href="https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases">la lista RockYou</a> del mismo repositorio, pero en este caso usamos un criterio más ridiculo para la selección: la contraseña número 69 para <em>root</em> y la número 69420 para <em>admin</em>. Ahora, no solo fue por los números, también por el tiempo que tomaría llegar a las contraseñas, pues no creimos que nuestros compañeros llegaran a intentar el usuario root, pero si lo hacían entrarían rápido an sistema. Sin embargo, estabamos seguros de que intentarían usar el usuario Admin, por lo que hicimos que, si era así, les costara mucho tiempo llegar a la respuesta.</p>
 <p>Por desgracia aquí terminamos viendonos como los malos de la historia debido a que el servidor donde se publicó el reto resultó ser muy lento y no se podían hacer más que 30 request por minuto, así que para llegar a la contraseña 69420 resultaba eterno y había que rogar que el servidor no se callera.</p>
 <h4 id="buscador">Buscador</h4>
 <p>La interfaz real de la aplicación era un buscador simple que mostraba Atletas con su nombre y nacionalidad. Nada del otro mundo. Para esta parte no hizo falta nada más que poner el query plano en la configuración de la página, de esta forma:</p>
@@ -1832,7 +1833,7 @@ Para el Login fue relativamente sencillo. Por la parte de HTML solo se necesitó
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;buscador.html&#39;</span><span class="p">,</span> <span class="n">busqueda</span><span class="o">=</span><span class="n">buscar</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">buscador_form</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Así hasta la inyección más sencilla funcionaría, y nos servía para ver todos los atletas disponibles con la famosa <strong>' or 1=1'</strong>.<br />
+</div><p>Así hasta la inyección más sencilla funcionaría, y nos servía para ver todos los atletas disponibles con la famosa <strong>' or 1=1&ndash;</strong>.<br />
 <figure >
   
   
@@ -1852,9 +1853,9 @@ Para el Login fue relativamente sencillo. Por la parte de HTML solo se necesitó
 Desde el navegador revisamos que las credenciales se envían por POST en el formato <code>username=admin&amp;password=admin</code>, y que recibimos el mensaje <code>Usuario o contraseña incorrecto.</code><br />
 El comando para obtener la contraseña y que funcionó para <em>root</em> y para <em>admin</em> es el siguiente:</p>
 <pre><code>hydra -l root -P /usr/share/wordlists/rockyou.txt -f localhost -s 5000 http-post-form &quot;/login:username=^USER^&amp;password=^PASS^:Usuario o contraseña incorrecto.&quot;
-</code></pre><p>Sin embargo hay que aclarar que yo estoy usando la aplicación en mi localhost por el puerto 5000, así que tal vez para alguien que lo publique, o use otro puerto deberá haber cambios en el comando.</p>
+</code></pre><p>Sin embargo hay que aclarar que yo estoy usando la aplicación en mi localhost por el puerto 5000, así que tal vez para alguien que use otro puerto deberá hacer cambios en el comando.</p>
 <h4 id="flag-1">Flag</h4>
-<p>Para la flag se va a intentar un método que aprendí hace poco, el llamado Fuzzing. Básicamente lo que haremos será usar un sofftware que hara peticiones a el dominio que queramos agregandole cosas como &ldquo;index&rdquo;, &ldquo;config&rdquo;, &ldquo;static&rdquo;, etc al final para probar si existen esas páginas que son tan comunes.<br />
+<p>Para la flag se va a intentar un método que aprendí hace poco, el llamado Fuzzing. Básicamente lo que haremos será usar un software que hará peticiones a el dominio que querramos agregandole cosas como &ldquo;index&rdquo;, &ldquo;config&rdquo;, &ldquo;static&rdquo;, etc al final para probar si existen esas páginas que son tan comunes.<br />
 Primero usaremos la herramienta <strong>gobuster</strong>, y la lista <code>big.txt</code> que también pertenece a el repositorio <strong>SecList</strong> y se puede conseguir <a href="https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/big.txt">aqui</a>.<br />
 El comando es:</p>
 <pre><code>gobuster dir -u http://localhost:5000 -w /usr/share/wordlists/dirb/big.txt 
@@ -1881,7 +1882,7 @@ El comando es:</p>
   
 </figure>
 <h4 id="ocultamiento">Ocultamiento</h4>
-<p>Como se mencionó antes, el proceso erá: Bruteforce al login, entrar a <em>/flag</em>, y finalmente sacar la Flag de la imagen indicada. Bien, pues en /flag se puede ver el siguiente vídeo:<br />
+<p>Como se mencionó antes, el proceso era: Bruteforce al login, entrar a <em>/flag</em>, y finalmente sacar la Flag de la imagen indicada. Bien, pues en /flag se puede ver el siguiente vídeo:<br />
 {<iframe width="560" height="315" src="https://www.youtube.com/embed/QJD6mT8u6fA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>}<br />
 El único atleta que se menciona en el vídeo es Diego Armando Maradona, por lo que debemos descargar su imagen y pasarla por alguna herramienta de ocultamiento. Nosotros usamos <strong>steghide</strong> para ocultar la bandera, por lo que será el mismo programa que usaremos para obtener la bandera. No sebería ser un problema terminar usando esta herramienta pues es de las más populares en los CTFs.<br />
 El comando es:</p>
@@ -1897,13 +1898,13 @@ El comando es:</p>
 </div>
 </div><h3 id="asegurando-la-aplicación">Asegurando la aplicación</h3>
 <p>No puedo concluir el articulo sin antes mencionar los métodos que se usaron para hacer segura la aplicación.</p>
-<p>Primero se metió un límite de intentos al login. Esto fue tan sencillo como agregar un contador a la cookie de sessión, que por cierto está cifrada, para que al 3er intento fallido se dejen de permitir logueos. Esto en una aplicación real tendría que cambiarse a una suspención temporal de la cuenta hasta que, por medio del correo electrónico del usuario, se verifique que todo está bien, y si se puede, incluso después de forzar un cambio de contraseña.</p>
+<p>Primero se metió un límite de intentos al login. Esto fue tan sencillo como agregar un contador a la cookie de sessión, que por cierto está cifrada, para que al tercer intento fallido se dejen de permitir logueos. Esto en una aplicación real tendría que cambiarse a una suspención temporal de la cuenta o al menos un bloqueo que mande un correo electrónico al usuario en el que se le pida desbloquear la cuenta de forma manual por medio de un enlace, e incluso donde se le podría pedir que cambie su contraseña.</p>
 <p>Después, en el buscador, simplemente se utilizo la query integrada de Flask para evitar la inyección SQL. Esta query lo que hace es &ldquo;sanitizar&rdquo; el input del usuario antes de meterlo en la query, así se evitan caracteres raros o comportamientos no deseados.</p>
 <p>También, para evitar que herramientas como gobuster o wfuzz realmente funcionen, se podría hacer que las páginas que requieren estar logueado manden un error 404 cuando se trata de acceder a ellas sin estar logueado.</p>
-<p>Y finalmente, lo ideal, sería poner un limite de peticiones por minuto para un usuario, y un bloqueo de IP en caso de ser necesario por medio de un Firewall, pero eso ya va más allá de la aplicación.</p>
+<p>Y finalmente lo ideal sería poner un limite de peticiones por minuto para un usuario, y un bloqueo de IP en caso de ser necesario por medio de un Firewall. Pero eso va más allá de los límites de la aplicación.</p>
 <p>Para más detalles de cómo hicimos segura la aplicación, pueden verlo en el repositorio de github en el <a href="https://github.com/babiloneos/Atletas/tree/Seguro">branch seguro</a>.</p>
 <h3 id="conclusión">Conclusión</h3>
-<p>Hacer retos para CTF no es fácil, pero es muy útil cuando uno quiere entender cómo es que una vulnerailidad funciona, cuál es la perspecctiva del desarrollador, cuáles son sus errores, y cómo podemos guíarlo para evitar o enmendar esos errores.</p>
+<p>Hacer retos para CTF no es fácil, pero es muy útil cuando uno quiere entender cómo es que una vulnerailidad funciona, cuál es la perspectiva del desarrollador, cuáles son sus errores, y cómo podemos guíarlo para evitar o enmendar esos errores.</p>
 <p>Veo en los CTFs una oportunidad inmensa de aprendizaje para los estudiantes, tanto por el aspecto teorico, practico, como en las habilidades con herramientas, la linea de comandos, y las OSINT. Me pareció increible y muy acertado que la UNLP implementara esta actividad, permitiendonos aprender, mientras nos divertimos. Y es que es súper importante recordar que la mejor forma de aprender es haciendo las cosas de una forma divertida.</p>
 
     </article>
