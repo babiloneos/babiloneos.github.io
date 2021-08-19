@@ -14,13 +14,67 @@
     <managingEditor>babiloneos@gmail.com (Guillermo Ballesteros)</managingEditor>
     <webMaster>babiloneos@gmail.com (Guillermo Ballesteros)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://babiloneos.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Docker</title>
+        <link>https://babiloneos.github.io/en/tags/docker/</link>
+        <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+        <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
+        
+        <guid>https://babiloneos.github.io/en/tags/docker/</guid>
+        <description></description>
+        
+        <dc:creator>Guillermo Ballesteros</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Python</title>
+        <link>https://babiloneos.github.io/en/tags/python/</link>
+        <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+        <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
+        
+        <guid>https://babiloneos.github.io/en/tags/python/</guid>
+        <description></description>
+        
+        <dc:creator>Guillermo Ballesteros</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Steganography</title>
+        <link>https://babiloneos.github.io/en/tags/steganography/</link>
+        <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+        <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
+        
+        <guid>https://babiloneos.github.io/en/tags/steganography/</guid>
+        <description></description>
+        
+        <dc:creator>Guillermo Ballesteros</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Bash</title>

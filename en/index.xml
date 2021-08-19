@@ -14,7 +14,7 @@
     <managingEditor>babiloneos@gmail.com (Guillermo Ballesteros)</managingEditor>
     <webMaster>babiloneos@gmail.com (Guillermo Ballesteros)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://babiloneos.github.io/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,6 +42,55 @@
         
       
 
+      
+      <item>
+        <title>Atletas - My challenge for a CTF</title>
+        <link>https://babiloneos.github.io/en/posts/atletas-mi-reto-para-ctf/</link>
+        <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+        <author>babiloneos@gmail.com (Guillermo Ballesteros)</author>
+        <atom:modified>Sun, 17 Jan 2021 00:00:00 +0000</atom:modified>
+        <guid>https://babiloneos.github.io/en/posts/atletas-mi-reto-para-ctf/</guid>
+        <description>It was 2020 when I had an Academic Exchange oportunity in Universidad Nacional de La Plata, Argentina. Unfortunately it coincided with the COVID-19 pandemic&amp;rsquo;s begin, however that didn&amp;rsquo;t stop interesting proyects development, neither the learning possibility, and neither stop me live new experiences.
+One of the classes I toke along this Exchange was Applications secure development by proffesor Einar Lafranco, a class that covers since free software, until Zero Day vulnerabilities, but with web applications OWASP Top Ten as main subject.</description>
+        
+        <dc:creator>Guillermo Ballesteros</dc:creator>
+        <media:content url="https://babiloneos.github.ioimages/Atletas/Atletas01.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        <media:content url="https://babiloneos.github.ioimages/Atletas/Atletas01.png" medium="image"><media:title type="html">meta image</media:title></media:content>
+        
+          
+            
+              <category>Python</category>
+            
+          
+            
+              <category>Docker</category>
+            
+          
+            
+              <category>Steganography</category>
+            
+          
+        
+        
+          
+            
+              <category>CTF</category>
+            
+          
+            
+              <category>Web Explotaition</category>
+            
+          
+        
+        
+          
+            
+              <category>Development</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Solving General Skills - picoCTF 2020</title>

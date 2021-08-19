@@ -20,6 +20,16 @@
   <url>
     <loc>https://babiloneos.github.io/posts/atletas-mi-reto-para-ctf/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/posts/atletas-mi-reto-para-ctf/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/posts/atletas-mi-reto-para-ctf/"
+                />
   </url>
   
   <url>
@@ -55,11 +65,31 @@
   <url>
     <loc>https://babiloneos.github.io/series/development/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/series/development/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/series/development/"
+                />
   </url>
   
   <url>
     <loc>https://babiloneos.github.io/tags/docker/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/tags/docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/tags/docker/"
+                />
   </url>
   
   <url>
@@ -80,6 +110,16 @@
   <url>
     <loc>https://babiloneos.github.io/tags/python/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/tags/python/"
+                />
   </url>
   
   <url>
@@ -100,6 +140,16 @@
   <url>
     <loc>https://babiloneos.github.io/tags/steganography/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/tags/steganography/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/tags/steganography/"
+                />
   </url>
   
   <url>
@@ -120,6 +170,16 @@
   <url>
     <loc>https://babiloneos.github.io/categories/web-explotaition/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babiloneos.github.io/en/categories/web-explotaition/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://babiloneos.github.io/categories/web-explotaition/"
+                />
   </url>
   
   <url>
