@@ -1850,13 +1850,10 @@ For the login page it was kind of easy. Over HTML it was just a simple <em>form<
 <p>Since the objective here is to bruteforce the login, we&rsquo;ll use hydra. From the browser we check that credential are being sended as POST this way <code>username=admin&amp;password=admin</code>, and we get the message <em>Usuario o contraseña incorrecto.</em> for failed Login tries. This guides us to use the next command:</p>
 <pre><code>hydra -l root -P /usr/share/wordlists/rockyou.txt -f localhost -s 5000 http-post-form &quot;/login:username=^USER^&amp;password=^PASS^:Usuario o contraseña incorrecto.&quot;
 </code></pre><p>Nevertheless I need to clarify I&rsquo;m using the application in my localhost over port 5000, so you should check this part of the command to match with your deployment details.</p>
-<blockquote>
-<p>This is everything I&rsquo;ve traslated. Sorry &hellip;</p>
-</blockquote>
 <h4 id="flag-1">Flag</h4>
-<p>Para la flag se va a intentar un método que aprendí hace poco, el llamado Fuzzing. Básicamente lo que haremos será usar un sofftware que hara peticiones a el dominio que queramos agregandole cosas como &ldquo;index&rdquo;, &ldquo;config&rdquo;, &ldquo;static&rdquo;, etc al final para probar si existen esas páginas que son tan comunes.<br />
-Primero usaremos la herramienta <strong>gobuster</strong>, y la lista <code>big.txt</code> que también pertenece a el repositorio <strong>SecList</strong> y se puede conseguir <a href="https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/big.txt">aqui</a>.<br />
-El comando es:</p>
+<p>For the flag we are gonna use a method that I&rsquo;ve just learned called fuzzing. Basically we are going to use a software that will send requests to the application adding to the URL things like  &ldquo;index&rdquo;, &ldquo;config&rdquo;, &ldquo;static&rdquo;, etc to check if this common pages exists.<br />
+We&rsquo;re going to use <strong>gobuster</strong> and the list <code>big.txt</code> that belongs to the repository <strong>SecList</strong> and you can get <a href="https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/big.txt">in here</a>.<br />
+The command is:</p>
 <pre><code>gobuster dir -u http://localhost:5000 -w /usr/share/wordlists/dirb/big.txt 
 </code></pre><figure >
   
@@ -1868,7 +1865,7 @@ El comando es:</p>
   
   
 </figure>
-<p>La segunda herramienta es <strong>wfuzz</strong> que de igual forma verifica nombres comunes de paginas en base a una lista. Usaremos la misma lista que en la anterior herramienta. El comando sería:</p>
+<p>Another tool we can use is <strong>wfuzz</strong> which does the same, it basically brute forces common pages in gived applications. The command using the same list is this:</p>
 <pre><code>wfuzz -c -z file,/usr/share/wordlists/dirb/big.txt --hc=404 localhost:5000/FUZZ
 </code></pre><figure >
   
@@ -1881,30 +1878,37 @@ El comando es:</p>
   
 </figure>
 <h4 id="steganography">Steganography</h4>
-<p>Como se mencionó antes, el proceso erá: Bruteforce al login, entrar a <em>/flag</em>, y finalmente sacar la Flag de la imagen indicada. Bien, pues en /flag se puede ver el siguiente vídeo:<br />
+<p>As I said before, the process should be: Bruteforce the Login page, enter <em>/flag</em> page and finally take the flag from the correct image. Well, we can see the next video in <em>/flag</em>:<br />
 {<iframe width="560" height="315" src="https://www.youtube.com/embed/QJD6mT8u6fA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>}<br />
-El único atleta que se menciona en el vídeo es Diego Armando Maradona, por lo que debemos descargar su imagen y pasarla por alguna herramienta de ocultamiento. Nosotros usamos <strong>steghide</strong> para ocultar la bandera, por lo que será el mismo programa que usaremos para obtener la bandera. No sebería ser un problema terminar usando esta herramienta pues es de las más populares en los CTFs.<br />
-El comando es:</p>
-<pre><code>steghide --extract -sf Descargas/maradona.jpeg -xf flag.txt -p &quot;&quot;
-</code></pre><p>Esto nos daría la flag en un archivo de texto llamado <code>flag.txt</code> cuyo contenido es:</p>
+The only athlete mentioned in the video is Diego Armando Maradona, so now we know we should download his image and pass it through some steganography tool. We used <strong>steghide</strong> to hidde the flag, so we should use the same tool to get the flag. This shouldn&rsquo;t be a problem since it&rsquo;s a very common tool in CTFs.<br />
+This is the command:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-flag.txt" data-lang="flag.txt">flag{FLAG}
+<pre class="chroma"><code class="language-bash" data-lang="bash">steghide --extract -sf Descargas/maradona.jpeg -xf flag.txt -p <span class="s2">&#34;&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>And this should give us the flag inside a file called <code>flag.txt</code>, with this content:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">flag{FLAG}
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="hardening-the-application">Hardening the application</h3>
-<p>No puedo concluir el articulo sin antes mencionar los métodos que se usaron para hacer segura la aplicación.</p>
-<p>Primero se metió un límite de intentos al login. Esto fue tan sencillo como agregar un contador a la cookie de sessión, que por cierto está cifrada, para que al 3er intento fallido se dejen de permitir logueos. Esto en una aplicación real tendría que cambiarse a una suspención temporal de la cuenta hasta que, por medio del correo electrónico del usuario, se verifique que todo está bien, y si se puede, incluso después de forzar un cambio de contraseña.</p>
-<p>Después, en el buscador, simplemente se utilizo la query integrada de Flask para evitar la inyección SQL. Esta query lo que hace es &ldquo;sanitizar&rdquo; el input del usuario antes de meterlo en la query, así se evitan caracteres raros o comportamientos no deseados.</p>
-<p>También, para evitar que herramientas como gobuster o wfuzz realmente funcionen, se podría hacer que las páginas que requieren estar logueado manden un error 404 cuando se trata de acceder a ellas sin estar logueado.</p>
-<p>Y finalmente, lo ideal, sería poner un limite de peticiones por minuto para un usuario, y un bloqueo de IP en caso de ser necesario por medio de un Firewall, pero eso ya va más allá de la aplicación.</p>
-<p>Para más detalles de cómo hicimos segura la aplicación, pueden verlo en el repositorio de github en el <a href="https://github.com/babiloneos/Atletas/tree/Seguro">branch seguro</a>.</p>
+<p>I can&rsquo;t conclude this article without talking about how we improve the security in this application.</p>
+<p>First of all we set a limit in login tries. This was easy, just add a counter to the session cookie, which by the way is encrypted. In the third failed try the account is blocked. In a real application this should be a temporal block, or at least a block that produce an email to the user asking him to unlock the account manually through a link.</p>
+<p>After this, the searcher. We just needded to use the Flask&rsquo;s integrated function to avoid the SQL injection. This function filter the input before adding it to the finall query, this way it clear from the input any speciall character.</p>
+<p>Also, to avoid tools like gobuster or wfuzz working with this application, we could make that pages with a login filter return the code 404 when someone try to access them without authorization.</p>
+<p>And finally, the ideal would be to set a requests limit for every user, and an IP block if needed through a firewall, but this goes out of the application limits.</p>
+<p>For more details on how we hardening this application you can check the <a href="https://github.com/babiloneos/Atletas/tree/Seguro">secure branch</a> in the github repository.</p>
 <h3 id="conclusion">Conclusion</h3>
-<p>Hacer retos para CTF no es fácil, pero es muy útil cuando uno quiere entender cómo es que una vulnerailidad funciona, cuál es la perspecctiva del desarrollador, cuáles son sus errores, y cómo podemos guíarlo para evitar o enmendar esos errores.</p>
-<p>Veo en los CTFs una oportunidad inmensa de aprendizaje para los estudiantes, tanto por el aspecto teorico, practico, como en las habilidades con herramientas, la linea de comandos, y las OSINT. Me pareció increible y muy acertado que la UNLP implementara esta actividad, permitiendonos aprender, mientras nos divertimos. Y es que es súper importante recordar que la mejor forma de aprender es haciendo las cosas de una forma divertida.</p>
+<p>To do CTF challenges is not easy, but is very helpfull to understand how does a vulnerability works, what is the developers point of view, what are their mistakes, and how can we guide them to avoid and fix this errors.</p>
+<p>I see an oportunity in CTFs for the students to learn the theorical side, the practical side, tools, command lines and even about OSINT. I see this as a good practice from the UNLP teachers to propose this kind of projects allowing us to learn as long as we get fun, which is very important, the best way to learn is doing funny things.</p>
 
     </article>
     
