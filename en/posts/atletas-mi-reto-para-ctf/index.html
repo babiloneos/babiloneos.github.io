@@ -1792,7 +1792,7 @@ For the login page it was kind of easy. Over HTML it was just a simple <em>form<
 </figure>
 <p>Lastly, users and passwords. For users we choiced 2 popular usernames based on <a href="https://github.com/danielmiessler/SecLists/blob/master/Usernames/top-usernames-shortlist.txt">this file</a> from the repository called <strong>SecLists</strong>, the names were <em>admin</em> and <em>root</em>. And for the passwords we used <a href="https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases">rockyou.txt</a> from the already mentioned repository, but to choice them we used a ridiculous criteria: password number 69 for the <em>root</em> user, and the password number 69420 for the <em>admin</em> user. But this wasn&rsquo;t just because of the numbers, it was also because of the time our colleagues would waste brute forcing the login. If they tried <em>root</em> first (which would be unlikely) they would get in really fast. But if they tried <em>admin</em> first (very likely) they would waste a lot of time reaching the password and getting in.</p>
 <p>Unfortunately we finished as the bad guys because the server where the application was deployed was a potato and only allowed 30 requests per minute, so it was almost imposible to reach the <em>admin</em> password.</p>
-<h4 id="buscador">Buscador</h4>
+<h4 id="searcher">Searcher</h4>
 <p>The main interface was a simple athlete searcher, which displayed a picture, name and nationality. Nothing special. This part needed to put the SQL query without any treatment, like this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1880,7 +1880,7 @@ El comando es:</p>
   
   
 </figure>
-<h4 id="ocultamiento">Ocultamiento</h4>
+<h4 id="steganography">Steganography</h4>
 <p>Como se mencionó antes, el proceso erá: Bruteforce al login, entrar a <em>/flag</em>, y finalmente sacar la Flag de la imagen indicada. Bien, pues en /flag se puede ver el siguiente vídeo:<br />
 {<iframe width="560" height="315" src="https://www.youtube.com/embed/QJD6mT8u6fA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>}<br />
 El único atleta que se menciona en el vídeo es Diego Armando Maradona, por lo que debemos descargar su imagen y pasarla por alguna herramienta de ocultamiento. Nosotros usamos <strong>steghide</strong> para ocultar la bandera, por lo que será el mismo programa que usaremos para obtener la bandera. No sebería ser un problema terminar usando esta herramienta pues es de las más populares en los CTFs.<br />
@@ -1895,14 +1895,14 @@ El comando es:</p>
 <pre class="chroma"><code class="language-flag.txt" data-lang="flag.txt">flag{FLAG}
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="asegurando-la-aplicación">Asegurando la aplicación</h3>
+</div><h3 id="hardening-the-application">Hardening the application</h3>
 <p>No puedo concluir el articulo sin antes mencionar los métodos que se usaron para hacer segura la aplicación.</p>
 <p>Primero se metió un límite de intentos al login. Esto fue tan sencillo como agregar un contador a la cookie de sessión, que por cierto está cifrada, para que al 3er intento fallido se dejen de permitir logueos. Esto en una aplicación real tendría que cambiarse a una suspención temporal de la cuenta hasta que, por medio del correo electrónico del usuario, se verifique que todo está bien, y si se puede, incluso después de forzar un cambio de contraseña.</p>
 <p>Después, en el buscador, simplemente se utilizo la query integrada de Flask para evitar la inyección SQL. Esta query lo que hace es &ldquo;sanitizar&rdquo; el input del usuario antes de meterlo en la query, así se evitan caracteres raros o comportamientos no deseados.</p>
 <p>También, para evitar que herramientas como gobuster o wfuzz realmente funcionen, se podría hacer que las páginas que requieren estar logueado manden un error 404 cuando se trata de acceder a ellas sin estar logueado.</p>
 <p>Y finalmente, lo ideal, sería poner un limite de peticiones por minuto para un usuario, y un bloqueo de IP en caso de ser necesario por medio de un Firewall, pero eso ya va más allá de la aplicación.</p>
 <p>Para más detalles de cómo hicimos segura la aplicación, pueden verlo en el repositorio de github en el <a href="https://github.com/babiloneos/Atletas/tree/Seguro">branch seguro</a>.</p>
-<h3 id="conclusión">Conclusión</h3>
+<h3 id="conclusion">Conclusion</h3>
 <p>Hacer retos para CTF no es fácil, pero es muy útil cuando uno quiere entender cómo es que una vulnerailidad funciona, cuál es la perspecctiva del desarrollador, cuáles son sus errores, y cómo podemos guíarlo para evitar o enmendar esos errores.</p>
 <p>Veo en los CTFs una oportunidad inmensa de aprendizaje para los estudiantes, tanto por el aspecto teorico, practico, como en las habilidades con herramientas, la linea de comandos, y las OSINT. Me pareció increible y muy acertado que la UNLP implementara esta actividad, permitiendonos aprender, mientras nos divertimos. Y es que es súper importante recordar que la mejor forma de aprender es haciendo las cosas de una forma divertida.</p>
 
@@ -2617,7 +2617,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#development">Development</a>
           <ul>
             <li><a href="#login">Login</a></li>
-            <li><a href="#buscador">Buscador</a></li>
+            <li><a href="#searcher">Searcher</a></li>
             <li><a href="#flag">Flag</a></li>
           </ul>
         </li>
@@ -2625,11 +2625,11 @@ document.addEventListener('DOMContentLoaded', function () {
           <ul>
             <li><a href="#login-1">Login</a></li>
             <li><a href="#flag-1">Flag</a></li>
-            <li><a href="#ocultamiento">Ocultamiento</a></li>
+            <li><a href="#steganography">Steganography</a></li>
           </ul>
         </li>
-        <li><a href="#asegurando-la-aplicación">Asegurando la aplicación</a></li>
-        <li><a href="#conclusión">Conclusión</a></li>
+        <li><a href="#hardening-the-application">Hardening the application</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
       </ul>
     </li>
   </ul>
