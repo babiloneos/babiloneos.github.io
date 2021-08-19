@@ -1845,16 +1845,14 @@ For the login page it was kind of easy. Over HTML it was just a simple <em>form<
 </figure></p>
 <h4 id="flag">Flag</h4>
 <p>Another problem. To discover wich image had the flag hidden you had to find a hidded page inside the application, but this page hadn&rsquo;t any reference along the application. And this page was configured to be displayed only if you was the <em>admin</em> user. This page is /flag, and inside you would find a very nostalgic video from &ldquo;Courage the Cowardly Dog&rdquo; but in his latam spanish version, this video would thell us exactly which athlete to search for.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<h4 id="login-1">Login</h4>
+<p>Since the objective here is to bruteforce the login, we&rsquo;ll use hydra. From the browser we check that credential are being sended as POST this way <code>username=admin&amp;password=admin</code>, and we get the message <em>Usuario o contraseña incorrecto.</em> for failed Login tries. This guides us to use the next command:</p>
+<pre><code>hydra -l root -P /usr/share/wordlists/rockyou.txt -f localhost -s 5000 http-post-form &quot;/login:username=^USER^&amp;password=^PASS^:Usuario o contraseña incorrecto.&quot;
+</code></pre><p>Nevertheless I need to clarify I&rsquo;m using the application in my localhost over port 5000, so you should check this part of the command to match with your deployment details.</p>
 <blockquote>
 <p>This is everything I&rsquo;ve traslated. Sorry &hellip;</p>
 </blockquote>
-<h3 id="walkthrough">Walkthrough</h3>
-<h4 id="login-1">Login</h4>
-<p>Dado que el objetivo aquí es hacer bruteforce usaremos hydra.<br />
-Desde el navegador revisamos que las credenciales se envían por POST en el formato <code>username=admin&amp;password=admin</code>, y que recibimos el mensaje <code>Usuario o contraseña incorrecto.</code><br />
-El comando para obtener la contraseña y que funcionó para <em>root</em> y para <em>admin</em> es el siguiente:</p>
-<pre><code>hydra -l root -P /usr/share/wordlists/rockyou.txt -f localhost -s 5000 http-post-form &quot;/login:username=^USER^&amp;password=^PASS^:Usuario o contraseña incorrecto.&quot;
-</code></pre><p>Sin embargo hay que aclarar que yo estoy usando la aplicación en mi localhost por el puerto 5000, así que tal vez para alguien que lo publique, o use otro puerto deberá haber cambios en el comando.</p>
 <h4 id="flag-1">Flag</h4>
 <p>Para la flag se va a intentar un método que aprendí hace poco, el llamado Fuzzing. Básicamente lo que haremos será usar un sofftware que hara peticiones a el dominio que queramos agregandole cosas como &ldquo;index&rdquo;, &ldquo;config&rdquo;, &ldquo;static&rdquo;, etc al final para probar si existen esas páginas que son tan comunes.<br />
 Primero usaremos la herramienta <strong>gobuster</strong>, y la lista <code>big.txt</code> que también pertenece a el repositorio <strong>SecList</strong> y se puede conseguir <a href="https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/big.txt">aqui</a>.<br />
