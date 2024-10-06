@@ -91,5 +91,4 @@ DEPENDENCIES
 
 BUNDLED WITH
    2.5.21
-
-bundle lock --add-platform x86_64-linux
+   bundle lock --add-platform x86_64-linux
