@@ -101,6 +101,7 @@ DEPENDENCIES
   jekyll (~> 4.3.4)
   jekyll-dash (~> 2)
   jekyll-feed (~> 0.12)
+  jekyll-paginate
   jekyll-tagging
   minima (~> 2.5)
   tzinfo (>= 1, < 3)
