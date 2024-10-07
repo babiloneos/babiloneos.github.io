@@ -11,4 +11,6 @@ author: Guillermo Ballesteros
 Bienvenidos a mi nuevo blog.
 Aquí estaré publicando mis practicas de OSINT, Linux, Networking y Cybersecurity.
 
+![Test image](/assets/img/test.jpg)
+
 Saludos.
