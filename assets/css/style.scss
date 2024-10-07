@@ -1,0 +1,73 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "dash";
+
+.post-excerpt {
+    @include themed() {
+        color: t('foreground-color');
+    }
+}
+
+.site-header .command_prompt {
+    color:chocolate;
+    font-size: 16px;
+    margin-left: 0.1em;
+}
+
+.page-content h1,
+.tag, .tag-cloud > a,
+.tag:hover, .tag-cloud > a:hover,
+.post a
+{
+    color:chocolate !important;
+}
+
+.theme--dark .post-link,
+.theme--dark .related-posts a,
+.theme--dark a:hover,
+.theme--dark .site-title, .theme--dark .site-title:visited, 
+.theme--dark .site-title:hover,
+.theme--dark h2
+{
+    color: antiquewhite;
+}
+
+
+.theme--dark .post-link-wrapper > .post-meta, 
+.theme--dark .credits,
+.theme--dark .credits > a,
+.theme--dark .post .post-date
+{
+    color: rgb(165, 159, 152);
+}
+
+.theme--dark body{
+    background: black;
+    color: antiquewhite;
+}
+
+.theme--light body {
+    background-color: antiquewhite;
+    color: #1E2227;
+}
+
+.theme--light .post-link,
+.theme--light .related-posts a,
+.theme--light a:hover,
+.theme--light .site-title, 
+.theme--light .site-title:visited, 
+.theme--light .site-title:hover,
+.theme--light h2
+{
+    color: #1E2227;
+}
+
+.theme--light .post-link-wrapper > .post-meta, 
+.theme--light .credits,
+.theme--light .credits > a,
+.theme--light .post .post-date
+{
+    color:#646566; 
+}
