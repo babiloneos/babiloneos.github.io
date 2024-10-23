@@ -24,8 +24,8 @@
 title: Babiloneos
 author: Guillermo Ballesteros
 description: >- # this means to ignore newlines until "baseurl:"
-  Babiloneos is the nickname of Guillermo Ballesteros, a Cybersecurity Analyst Jr.
-  and this blog's objective is to share all kind of practices related to OSINT
+  Babiloneos is the nickname of Guillermo Ballesteros, a Jr. Cybersecurity Analyst 
+  and this blog's objective is to share all kind of practices related to OSINT,
   Linux, Networking and Cybersecurity.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://babiloneos.github.io" # the base hostname & protocol for your site, e.g. http://example.com
