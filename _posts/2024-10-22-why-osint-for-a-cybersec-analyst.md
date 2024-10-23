@@ -47,6 +47,8 @@ Both with very good reviews and with very interesting content. But I didn't want
 
 It was _Deep Dive: Exploring the Real-World Value of Open Source Intelligence_.
 
+![Deep Dive Book Cover](/assets/img/DeepDive_book.jpg)
+
 And don't worry, once I have completed this book, I will go with _OSINT Techniques: Resources for Uncovering Online Information_. But I needed something that helped me giving form in a peaceful way to my childish motivation.
 
 That's it. I decided to start this book, but after all of that, I needed somewhere to record all my adventure, learnings and findings. And that where this blog cames into play.
