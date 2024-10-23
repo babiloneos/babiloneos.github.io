@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Deep Dive 000 - Why OSINT for a Cybersecurity Analyst Jr.?"
-date:   2024-10-06 16:03:21 -0600
+date:   2024-10-21 18:30:00 -0600
 tags: OSINT DeepDiveBook Myself
 author: Guillermo Ballesteros
 ---
