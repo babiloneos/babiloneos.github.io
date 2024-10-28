@@ -104,7 +104,7 @@ alexg@d...o.com             - Alex (Alejandro) G
 sergior@d...o.com           - Sergio R
 lalo@d...o.com              - Lalo (Eduardo)
 luzma@d...o.com             - Luzma (Luz María)
-osmar.carrillo@d...o.com    - Osmar Gabriel Sandoval Carrillo
+osmar.carrillo@d...o.com    - Osmar G S Carrillo
 ```
 
 But neither of them fully fits if we look at the 2 adresses with a nickname as user. Looks like this company doesn't really have a strict username policy for their mail addresses.
