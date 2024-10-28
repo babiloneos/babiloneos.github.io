@@ -35,9 +35,11 @@ Now, we still don't have a well defined structure for investigations, as that is
 
 The book is really clear on what we are looking for:
 
-1. Using just your personal email address and a search engine, how much information are you able to find on yourself?
-2. Did you find any of your personal usernames or social media accounts?
-3. Could you find any official records such as voting information or houses purchases? What did these records reveal about you, and how could that information be used?
+> 1. Using just your personal email address and a search engine, how much information are you able to find on yourself?
+> 
+> 2. Did you find any of your personal usernames or social media accounts?
+> 
+> 3. Could you find any official records such as voting information or houses purchases? What did these records reveal about you, and how could that information be used?
 
 This is defining our main questions to star the Intelligence Cycle:
 
