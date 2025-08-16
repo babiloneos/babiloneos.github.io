@@ -3,6 +3,10 @@
 
 @import "dash";
 
+.post img {
+    width: auto;
+}
+
 .post-excerpt {
     @include themed() {
         color: t('foreground-color');
