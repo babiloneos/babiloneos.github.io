@@ -15,15 +15,15 @@ So as part of this, and guided by my enthusiasm, I decided to publish an entry h
 
 # The requirements
 
-1. Deploy a basic Cloudflare setup including onboarding a domain into Cloudflare and basic security protection for it.
-2. All pages in the website must use https.
-3. Setup firewall rules to:
+1. **Deploy a basic Cloudflare setup** including onboarding a domain into Cloudflare and basic security protection for it.
+2. All pages in the website **must use https**.
+3. Setup **firewall rules** to:
  a. Block traffic from at least five countries.
  b. Avoid too many requests on a particular part of the website. 
-4. Create a response header containing:
+4. **Create a response header** containing:
  a. Name: CF-Custom-Header
  b. Value: True
-5. Write the report as if you where creating a customer facing document.
+5. **Write the report** as if you where creating a customer facing document.
 
 # Prerequisites 
 
@@ -41,11 +41,11 @@ My solution was:
 
 I don't want to go deeper on this, as this will be a separate post, but **the result was** a CTF project from the university, coded with Python and Flask, hosted as a Docker Container in an Azure Web Application.
 
-You can consult it in here:
+You can consult it in here (for a brief period):
 
 > 🌐 **[atletasctf.site](https://atletasctf.site/)**  
 
-But keep in mind that it won't be online for a long time as it is costing me money, and I'm not interested in paying $30/month just for the fun of having a college-level CTF online.
+But keep in mind that it won't be online for a long time as it is costing me money, and I'm not interested on paying $30/month just for the fun of having a college-level CTF online.
 
 ![Azure Web Page Overview](/assets/img/CloudflareCTF/AzureWebApp.png)
 
@@ -86,29 +86,26 @@ How beauty is that?!
 
 All I had to do was to went into "Certificates" module in the Admin dashboard, and add it. 
 
-Now, quick note, I did this AFTER getting and configuring the domain in Azure, so my certificate was provided directly to the domain atletascts.site.
+Now, quick note, I did this AFTER getting and configuring the domain in Azure, so my certificate was provided directly to the domain atletasctf.site.
 
 ![Azure Certificate](/assets/img/CloudflareCTF/AzureCertificate.png)
 
-**Do you want a better new?** This was wortless as Cloudflare also provides TLS certificates for free. So yes, at the end I decided to use the Cloudflare certificate, but we will see that in a moment.
+**Do you want a better new?** This was wortless as **Cloudflare also provides TLS certificates for free**. So yes, at the end I decided to use the Cloudflare certificate, but we will see that in a moment.
 
 ✅ **DONE**
 
 #### Ready to go!
 
 With the webpage up and running on a personalized domain, and TLS certificates, lets star with Cloudflare hands-on.
-> Please notice 🟡 Because of the deliverable indications, the next section will have a more professional writting. (See [The requirements](#the-requirements), point 5, to understand)
+> Please notice 🟡 Because of the deliverable indications, the next section will have a more professional writting, or at leat I will try for it to have it. (See [The requirements](#the-requirements), point 5, to understand)
 
 # Tasks list
 
-## 1. Summary detailing how you implemented the technical requirements and where or how we can validate your deliverables.
+## 1. Report detailing how you implemented the technical requirements and where or how we can validate your deliverables.
 
 ### Create an account
 
-Cloudflare offers a free plan for anyone to protect their web pages, covering the fundamental protections as DDos, WAF, Caching, and more.
-
-If you don't have an account yet, please follow the bellow steps.
-If you already have an account with onboarded domains, please jump directly to [Setup an additional domain](#creating-as-additional-domain)
+**Cloudflare offers a free plan** for anyone to protect their web pages, covering the fundamental protections as DDos, WAF, Caching, and more.
 
 1. Go to the Sing Up page:
 [dash.cloudflare.com/sign-up](https://dash.cloudflare.com/sign-up)
@@ -123,21 +120,11 @@ After filling the form, click on the "I'm not a robot" box, and click on sign-up
 
 ### Onboard a domain
 
-#### Creating as additional domain
-
-If you already have an account and already have a domain in Cloudflare, your first screen at log-in will look different. All you need to do is click the "Onboard a domain" button.
-
-![Onboard a domain](/assets/img/CloudflareCTF/CF_CreateButton.png)
-
-And that way you will arrive to the same screen we saw previously for new accounts.
-
-####  Onboard the domain
-
-At this point you will be at the "**Boost your site's speed ans security**" screen. Here we will enroll a new domain in cloudflare:
+At this point you will be at the "**Boost your site's speed and security**" screen. Here we will enroll a new domain in cloudflare:
 
 ![Set a new domain](/assets/img/CloudflareCTF/CF_step1_config.png)
 
-In the first input field with the text "Enter an existing domain" you will need to put the domain of your already existing web page.
+In the first input field with the text "_Enter an existing domain_" you will need to put the domain of your already existing web page.
 
 For this example the input was _atletasctf.site_
 
@@ -148,7 +135,7 @@ Then you will find a list of options:
 
 We will follow the recommended option, that is the first one **Quick scan for DNS records**. This will  make Cloudflare to scan over the internet Domain Name Servers to get all the information related to the domain name of our web page. This will get the IP addresses of the server, and other useful information.
 
-Additionally Cloudflare has just enable a new configuration to control the access for AI bots (like the used by chatGPT or Cloude). With this configurations you can stop them, from getting access to your web page and the information inside them.
+Additionally Cloudflare has just enable a new configuration to **control the access for AI bots** (like the used by chatGPT or Cloude). With this configurations you can stop them, from getting access to your web page and the information inside them.
 
 The options are:
 1. Block on all pages
@@ -169,9 +156,9 @@ Cloudflare offers a lot of options based on their huge catalog of protection and
 
 For this example we are using the Free plan, that is the first one on the left side. 
 
-The free plan covers all the basic protections for DDoS,  bots, rate-limiting, etc.
+The **free plan covers all the basic protections** for DDoS,  bots, rate-limiting, etc.
 
-Select your plan with the "Select plan" button
+Select your plan with the "_Select plan_" button
 
 ![Select a plan](/assets/img/CloudflareCTF/CF_step2_plan.png)
 
@@ -367,7 +354,7 @@ The format is similar to the _Custom Rule_: Select a name, select a filter, and 
 
 With this we protect ourselves from scripted attacks, and any other kind of automated threat that depends on performing multiple requests in a shor period of time.
 
-> **This post is under-development**
+> **This post is under-development !!!**
 I totally abandoned this blog like a year ago because of lack of motivation. But thanks to the free time I've had for the past months I'm planning to resume this little project to share all I've done and all I've learned. Please be patient and wait for the future updates.
 
 ## 2. Did you learn anything new during this assignment?
