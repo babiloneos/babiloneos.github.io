@@ -1,10 +1,40 @@
 ---
 layout: post
-title:  "Testing Cloudflare capacities with a CTF project"
+title:  "Cloudflare report for a selection process"
 date:   2025-08-15 10:50:00 -0600
-tags: Cloudflare CTF 
+tags: Cloudflare CTF
 author: Guillermo Ballesteros
----
+----
+
+# Table of content
+- [Table of content](#table-of-content)
+- [What is this?](#what-is-this)
+- [The requirements](#the-requirements)
+- [Prerequisites](#prerequisites)
+    - [1. Public web page up and running](#1-public-web-page-up-and-running)
+    - [2. Domain for the webpage already set](#2-domain-for-the-webpage-already-set)
+    - [3. TLS Certificates to use HTTPS](#3-tls-certificates-to-use-https)
+      - [Ready to go!](#ready-to-go)
+- [Tasks list](#tasks-list)
+  - [1. Report detailing how you implemented the technical requirements and where or how we can validate your deliverables.](#1-report-detailing-how-you-implemented-the-technical-requirements-and-where-or-how-we-can-validate-your-deliverables)
+    - [Create an account](#create-an-account)
+    - [Onboard a domain](#onboard-a-domain)
+      - [Select a Plan](#select-a-plan)
+      - [DNS Records](#dns-records)
+      - [Update nameservers](#update-nameservers)
+      - [Replication of nameserver](#replication-of-nameserver)
+      - [Finished process](#finished-process)
+    - [HTPPS for all the web page](#htpps-for-all-the-web-page)
+      - [Always Use HTPPS](#always-use-htpps)
+      - [Minimum TLS Version](#minimum-tls-version)
+      - [TLS 1.3](#tls-13)
+      - [Automatic HTTPS Rewrites](#automatic-https-rewrites)
+    - [Firewall Rules](#firewall-rules)
+      - [Block traffic from at least five countries.](#block-traffic-from-at-least-five-countries)
+      - [Challenge rule](#challenge-rule)
+      - [Avoid too many requests on a particular part of the website](#avoid-too-many-requests-on-a-particular-part-of-the-website)
+- [Conclusion](#conclusion)
+
 
 # What is this?
 
@@ -35,6 +65,7 @@ I struggled a lot with this task, as **I didn't had a public web page**, and the
 Additionally, I didn't know anything about docker, or how to deploy it with any cloud service.
 
 My solution was:
+
    1. Focus on making the web site fully functional
    2. Use my recent knowledge on Azure to test the deployment of my web page there
    3. And finally, use the cloud configuration that worked the best for me
@@ -50,13 +81,13 @@ But keep in mind that it won't be online for a long time as it is costing me mon
 ![Azure Web Page Overview](/assets/img/CloudflareCTF/AzureWebApp.png)
 
 However you can always deploy it with the public docker repository, or with the github repository (with an update pending for the README):
+
    - *babiloneos/atletas:latest*
    - *[github.com/babiloneos/Atletas](https://github.com/babiloneos/Atletas)*
 
 ✅ **DONE**
 
 ### 2. Domain for the webpage already set
-
 
 So once the webpage was up and running, good news, Azure provided me with an unique url. That works as a domain, right? ... well, no.
 
@@ -84,7 +115,7 @@ Turns out that Azure provides free certificates for HTTPS, and they are re-signe
 
 How beauty is that?!
 
-All I had to do was to went into "Certificates" module in the Admin dashboard, and add it. 
+All I had to do was to went into "Certificates" module in the Admin dashboard, and add it.
 
 Now, quick note, I did this AFTER getting and configuring the domain in Azure, so my certificate was provided directly to the domain atletasctf.site.
 
@@ -354,7 +385,7 @@ The format is similar to the _Custom Rule_: Select a name, select a filter, and 
 
 With this we protect ourselves from scripted attacks, and any other kind of automated threat that depends on performing multiple requests in a shor period of time.
 
-## Conclusion
+# Conclusion
 
 I omited some questions about how I researched some topics, or what were the most difficult parts for me, as it would have been a much more longer text than it already is.
 
