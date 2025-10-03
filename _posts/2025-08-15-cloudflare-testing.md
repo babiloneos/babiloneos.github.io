@@ -354,44 +354,11 @@ The format is similar to the _Custom Rule_: Select a name, select a filter, and 
 
 With this we protect ourselves from scripted attacks, and any other kind of automated threat that depends on performing multiple requests in a shor period of time.
 
-> **This post is under-development !!!**
-I totally abandoned this blog like a year ago because of lack of motivation. But thanks to the free time I've had for the past months I'm planning to resume this little project to share all I've done and all I've learned. Please be patient and wait for the future updates.
+## Conclusion
 
-## 2. Did you learn anything new during this assignment?
+I omited some questions about how I researched some topics, or what were the most difficult parts for me, as it would have been a much more longer text than it already is.
 
-As my first close interaction with Cloudflare technologies, and any similar service for implementation purpose, this was a really enriching experience with a lot of new knowledge for me.
+However, I would like to express how great this experience was, and how surprised I am by Cloudflare's ease of use for websites cyberprotection. I even remember with great respect and admiration the [Project Galileo](https://www.cloudflare.com/galileo/) that I learned about during this selection process.
+This is a humanitarian aid program that provides paid cloudflare services to organizations working in human rights, civil society or journalism, for free.
 
-For specific Cloudflare catalog, I highlight 2 topics:
-
-### HTTP version
-
-Though I have heard about this, I did't fully understood its impact and importance until this practice.
-
-Related to Cloudflare:
-HTTP versions
-Load Latency
-
-Caching
-Reverse Proxy
-AI Crawlers
-Hotlink Protection
-
-## 3. How did you fill the gaps (if any) in your knowledge during the process?
-Video Tutorials
-Cloudflare Documentations
-Online forums like Stack overflow and reddit
-ChatGPT for speeding up easy to find thinks, as paths, commands, etc.
-## 4. What was your experience with each deliverable?
-   1. What issues did you run into (if any) and how did you overcome them?
-    Programming language compatibility issuess
-    framework bugs or deprecated methods
-    containers ports exposure
-    Not perse with cloudflare as it is a really easy-to-set tool
-   2.  How would you describe each **product** in simple language?
-    Each product?
-   3.  What use cases you can see each **product** being useful for?
-    Each product?
-## 5.  Would HTTP response headers be different if you were not using Cloudflare?
-   YES **Add comparison**
-## 6. How do you imagine that a target customer will find this experience?
-Easy
+Though I dropped out the selection process because of personal preferences, I really learned a lot about the company, their technology and their impact on the Internet, rooting in me a great sense of respect, and obviously, a lot of interest on using them for personal projects.
