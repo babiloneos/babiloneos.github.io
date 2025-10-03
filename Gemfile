@@ -37,3 +37,5 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 #Theme
 gem 'jekyll-dash', '~> 2'
 
+gem 'csv'
+gem 'logger'

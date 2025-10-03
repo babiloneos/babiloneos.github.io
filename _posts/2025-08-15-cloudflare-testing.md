@@ -359,6 +359,14 @@ I totally abandoned this blog like a year ago because of lack of motivation. But
 
 ## 2. Did you learn anything new during this assignment?
 
+As my first close interaction with Cloudflare technologies, and any similar service for implementation purpose, this was a really enriching experience with a lot of new knowledge for me.
+
+For specific Cloudflare catalog, I highlight 2 topics:
+
+### HTTP version
+
+Though I have heard about this, I did't fully understood its impact and importance until this practice.
+
 Related to Cloudflare:
 HTTP versions
 Load Latency
